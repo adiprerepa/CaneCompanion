@@ -27,7 +27,8 @@ public class CaneThread extends Thread {
 		try {
 			int latitude = dataStream.readInt();
 			int longitude = dataStream.readInt();
-			mysqlDb.insertCoordinates(latitude, longitude);
+			String username = dataStream.readUTF();
+			mysqlDb.insertCoordinates("Aditya", latitude, longitude);
 			System.out.println("Recieved and inserted coordinates");
 		} catch (Exception e) {
 			e.printStackTrace(); 

@@ -11,6 +11,7 @@ public class AppServer extends Thread {
 		this.mysqlDb = mysqlDb;
 		try {
 			serverSocket = new ServerSocket(41256);
+			System.out.println("Waiting for App Server connections...");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

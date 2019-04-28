@@ -26,7 +26,8 @@ public class AppThread extends Thread {
 	public void run() {
 		try {
 			int id = dataInput.readInt();
-			String coordinates = mysqlDb.retrieveCoordinates(id);
+			String username = dataInput.readUTF();
+			String coordinates = mysqlDb.retrieveCoordinates(username, id);
 			dataOutput.writeUTF(coordinates);
 		} catch (Exception e) {
 			e.printStackTrace();

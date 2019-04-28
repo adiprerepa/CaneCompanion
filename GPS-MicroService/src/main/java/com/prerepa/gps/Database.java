@@ -22,10 +22,10 @@ public class Database {
 		}
 	}
 
-	public void insertCoordinates(int latitude, int longitude) {
+	public void insertCoordinates(String username, int latitude, int longitude) {
 		try {
 			Statement stmt = conn.createStatement();
-			String insertStatement = String.format("INSERT INTO coordinates(id, latitude, longitude) values (null, %d, %d)", latitude, longitude);
+			String insertStatement = String.format("INSERT INTO coordinates(id, username, latitude, longitude) values (null, '%s', %d, %d)", username, Math.round(latitude * 100) / 100, Math.round(longitude * 100) / 100);
 			stmt.executeUpdate(insertStatement);
 			System.out.println("Insert Successful");
 		} catch (Exception e) {
@@ -34,20 +34,22 @@ public class Database {
 		}
 	}
 
-	public String retrieveCoordinates(int id) {
+	public String retrieveCoordinates(String username, int id) {
 		String coordinates = null;
 		try {
 			Statement stmt = conn.createStatement();
-			String retrieveStatement = "SELECT id, latitude, longitude FROM coordinates";
+			String retrieveStatement = "SELECT * FROM coordinates";
 			ResultSet retrievedResults = stmt.executeQuery(retrieveStatement);
 
 			while (retrievedResults.next()) {
-				if (retrievedResults.getInt("id") == id) {
-					Integer latitude = retrievedResults.getInt("latitude");
-					Integer longitude = retrievedResults.getInt("longitude");
+				int tmp1 = retrievedResults.getInt("id");
+				String user = retrievedResults.getString("username");
+				if (retrievedResults.getInt("id") == id && retrievedResults.getString("username").equals(username)) {
+					Double latitude = retrievedResults.getDouble("latitude");
+					Double longitude = retrievedResults.getDouble("longitude");
 					coordinates = String.format("%s %s", latitude.toString(), longitude.toString());
 				} else {
-					System.err.println("There was no records for the id provided");
+					continue;
 				}
 			}
 		} catch (Exception e) {

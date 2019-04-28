@@ -11,6 +11,8 @@ public class Main {
 		CaneServer caneserver = new CaneServer(mysqlDb);
 		AppServer appserver = new AppServer(mysqlDb);
 		caneserver.start();
+		System.out.println("Started cane server");
 		appserver.start();
+		System.out.println("Started App Server");
 	}
 }

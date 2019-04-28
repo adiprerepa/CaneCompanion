@@ -14,6 +14,7 @@ public class CaneServer extends Thread{
 	public CaneServer(Database mysqlDb) {
 		try {
 			serverSocket = new ServerSocket(50051);
+			System.out.println("Listening for cane connections on port 50051");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
