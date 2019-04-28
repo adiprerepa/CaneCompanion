@@ -7,9 +7,10 @@ public class Main {
                 String username = "adi";
                 String password = "adirocks";
                 Database mysqlDb = new Database(databaseUrl, username, password);
-
 		CaneServer caneserver = new CaneServer(mysqlDb);
+		System.out.println("Initialized Cane Server");
 		AppServer appserver = new AppServer(mysqlDb);
+		System.out.println("Initialized app server");
 		caneserver.start();
 		System.out.println("Started cane server");
 		appserver.start();
