@@ -1,0 +1,20 @@
+PODS:
+  - AlertOnboarding (2.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - AlertOnboarding
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AlertOnboarding
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  AlertOnboarding: 2e6804e67894894807c5d24bcfcd7905897e6f08
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 3dc62d47929f396b5bb210065ec0ba3b7925113a
+
+COCOAPODS: 1.6.1
