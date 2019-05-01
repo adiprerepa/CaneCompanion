@@ -1,6 +1,6 @@
 package com.prerepa.accounts;
 
-import java.sql;
+import java.sql.*;
 
 public class Database {
 

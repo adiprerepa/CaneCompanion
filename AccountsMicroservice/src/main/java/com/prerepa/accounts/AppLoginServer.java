@@ -1,7 +1,7 @@
 package com.prerepa.accounts;
 
 import java.net.ServerSocket;
-import java.net.Socket
+import java.net.Socket;
 
 public class AppLoginServer extends Thread {
 
@@ -22,7 +22,8 @@ public class AppLoginServer extends Thread {
 	public void run() {
 		while(true) {
 			try {
-				Socket login = serverSocket.accept();
+				Socket login = server.accept();
+				System.out.println("Got Conn");
 				AppLoginThread appLogin = new AppLoginThread(login, userDatabase);
 				appLogin.start();
 			} catch (Exception e) {

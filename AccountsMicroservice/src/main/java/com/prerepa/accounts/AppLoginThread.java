@@ -4,7 +4,7 @@ import java.net.Socket;
 import java.io.DataOutputStream;
 import java.io.DataInputStream;
 
-public class AppLoginThread {
+public class AppLoginThread extends Thread {
 
 	private Database userDatabase;
 	private Socket login;
@@ -24,5 +24,17 @@ public class AppLoginThread {
 
 	@Override
 	public void run() {
-
+		try {
+			String userName = input.readUTF();
+			String password = input.readUTF();
+			String caneID = input.readUTF();
+			if (userDatabase.userExists(userName, password, caneID)) {
+				System.out.println("Exists");
+			} else {
+				System.out.println("Something worong");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
+}
