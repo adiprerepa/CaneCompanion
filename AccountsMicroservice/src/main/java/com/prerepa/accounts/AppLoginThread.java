@@ -27,11 +27,13 @@ public class AppLoginThread extends Thread {
 		try {
 			String userName = input.readUTF();
 			String password = input.readUTF();
-			String caneID = input.readUTF();
 			if (userDatabase.userExists(userName, password, caneID)) {
+				output.writeUTF("Exists");
 				System.out.println("Exists");
+
 			} else {
-				System.out.println("Something worong");
+				output.writeUTF("No User");
+				System.out.println("No User");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
