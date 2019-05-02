@@ -21,18 +21,18 @@ public class Database {
 		}
 	}
 
-	public boolean userExists(String databaseUsername, String databasePassword, String CaneID) {
+	public boolean userExists(User user) {
 		boolean exists = false;
 		try {
 			Statement stmt = conn.createStatement();
-			String getResults = "SELECT username, password, CaneID FROM users";
+			String getResults = "SELECT username, password FROM users";
 			ResultSet retrieved = stmt.executeQuery(getResults);
 
 			while (retrieved.next()) {
-				String user = retrieved.getString("username");
+				String username = retrieved.getString("username");
 				String password = retrieved.getString("password");
-				String ID = retrieved.getString("CaneID");
-				if (user.equals(databaseUsername) && password.equals(databasePassword) && ID.equals(CaneID)) {
+				if (username.equals(user.username) && password.equals(user.password)) {
+					user.setValues(retrieved);
 					exists = true;
 				} else {
 					continue;
@@ -42,6 +42,26 @@ public class Database {
 			e.printStackTrace();
 		}
 		return exists;
+	}
+
+	public boolean caneIDExists(String user, String caneID) {
+		boolean caneExists = false;
+		try {
+			Statement caneStatement = conn.createStatement();
+			String exec = "SELECT CaneID FROM CaneID";
+			ResultSet caneIdRetrieved = caneStatement.executeQuery(exec);
+			
+			while(caneIdRetrieved.next()) {
+				if (caneIdRetrieved.getString("CaneID").equals(caneId) && caneIdRetrieved.getString("Username").equals(user)) {
+					caneExists = true
+				} else {
+					continue;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return caneExists;
 	}
 
 

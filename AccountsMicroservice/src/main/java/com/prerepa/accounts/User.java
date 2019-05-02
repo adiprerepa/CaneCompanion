@@ -7,7 +7,6 @@ public class User {
 	
 	String userName;
 	String password;
-	String caneID;
 	String Name;
 	int age;
 	String caneModel;
@@ -15,10 +14,9 @@ public class User {
 	String InitialWiFiPass;
 	String IPaddr;
 
-	public User(String userName, String password, String caneID) {
+	public User(String userName, String password) {
 		this.userName = userName;
 		this.password = password;
-		this.caneID = caneID;
 	}
 
 	public void setValues(ResultSet retrieved) throws Exception {
