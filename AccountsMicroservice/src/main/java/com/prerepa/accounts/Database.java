@@ -44,7 +44,7 @@ public class Database {
 		return exists;
 	}
 
-	public boolean caneIDExists(String user, String caneID) {
+	public boolean checkCaneID(String user, String caneID) {
 		boolean caneExists = false;
 		try {
 			Statement caneStatement = conn.createStatement();
@@ -53,7 +53,7 @@ public class Database {
 			
 			while(caneIdRetrieved.next()) {
 				if (caneIdRetrieved.getString("CaneID").equals(caneId) && caneIdRetrieved.getString("Username").equals(user)) {
-					caneExists = true
+					caneExists = true;
 				} else {
 					continue;
 				}

@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+message gpsRequest {
+    optional string username = 1;
+
+}
+
+message gpsResponse {
+    optional string resp = 1;
+}
+
+service GpsService {
+    rpc getCoordinates(gpsRequest) returns (gpsResponse) {}
+}
