@@ -1,0 +1,6 @@
+/home/aditya/test2/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloWorldProto.java
+/home/aditya/test2/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloReplyOrBuilder.java
+/home/aditya/test2/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloRequestOrBuilder.java
+/home/aditya/test2/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloReply.java
+/home/aditya/test2/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloRequest.java
+/home/aditya/test2/target/generated-sources/protobuf/grpc-java/io/grpc/examples/helloworld/GreeterGrpc.java

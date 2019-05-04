@@ -9,6 +9,7 @@ package gps;
 message Location {
 	required int32 latitude = 1;
 	required int32 longitude = 2;
+	required string username = 3;
 }
 
 message Response {
