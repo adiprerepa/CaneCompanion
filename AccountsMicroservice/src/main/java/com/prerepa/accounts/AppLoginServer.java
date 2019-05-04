@@ -11,7 +11,7 @@ public class AppLoginServer extends Thread {
 	public AppLoginServer(Database userDatabase) {
 		this.userDatabase = userDatabase;
 		try {
-			server = new ServerSocket(31667);
+			server = new ServerSocket(31668);
 			System.out.println("Waiting for login...");
 		} catch (Exception e) {
 			e.printStackTrace();

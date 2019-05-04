@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.prerepa.gps.AppTest" time="0.027" tests="1" errors="0" skipped="0" failures="0">
+=======
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.prerepa.gps.AppTest" time="0.132" tests="1" errors="0" skipped="0" failures="0">
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
+<<<<<<< HEAD
     <property name="java.class.path" value="/home/aditya/CaneCompanion/GPS-MicroService/target/test-classes:/home/aditya/CaneCompanion/GPS-MicroService/target/classes:/home/aditya/.m2/repository/io/grpc/grpc-netty-shaded/1.20.0/grpc-netty-shaded-1.20.0.jar:/home/aditya/.m2/repository/io/grpc/grpc-core/1.20.0/grpc-core-1.20.0.jar:/home/aditya/.m2/repository/io/grpc/grpc-context/1.20.0/grpc-context-1.20.0.jar:/home/aditya/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar:/home/aditya/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.2/error_prone_annotations-2.3.2.jar:/home/aditya/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/aditya/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/home/aditya/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/home/aditya/.m2/repository/io/opencensus/opencensus-api/0.19.2/opencensus-api-0.19.2.jar:/home/aditya/.m2/repository/io/opencensus/opencensus-contrib-grpc-metrics/0.19.2/opencensus-contrib-grpc-metrics-0.19.2.jar:/home/aditya/.m2/repository/io/grpc/grpc-protobuf/1.20.0/grpc-protobuf-1.20.0.jar:/home/aditya/.m2/repository/com/google/protobuf/protobuf-java/3.7.1/protobuf-java-3.7.1.jar:/home/aditya/.m2/repository/com/google/guava/guava/26.0-android/guava-26.0-android.jar:/home/aditya/.m2/repository/org/checkerframework/checker-compat-qual/2.5.2/checker-compat-qual-2.5.2.jar:/home/aditya/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/aditya/.m2/repository/com/google/api/grpc/proto-google-common-protos/1.12.0/proto-google-common-protos-1.12.0.jar:/home/aditya/.m2/repository/io/grpc/grpc-protobuf-lite/1.20.0/grpc-protobuf-lite-1.20.0.jar:/home/aditya/.m2/repository/io/grpc/grpc-stub/1.20.0/grpc-stub-1.20.0.jar:/home/aditya/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/aditya/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/aditya/.m2/repository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar:"/>
+=======
+    <property name="java.class.path" value="/home/ubuntu/CaneCompanion/GPS-MicroService/target/test-classes:/home/ubuntu/CaneCompanion/GPS-MicroService/target/classes:/home/ubuntu/.m2/repository/io/grpc/grpc-netty-shaded/1.20.0/grpc-netty-shaded-1.20.0.jar:/home/ubuntu/.m2/repository/io/grpc/grpc-core/1.20.0/grpc-core-1.20.0.jar:/home/ubuntu/.m2/repository/io/grpc/grpc-context/1.20.0/grpc-context-1.20.0.jar:/home/ubuntu/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar:/home/ubuntu/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.2/error_prone_annotations-2.3.2.jar:/home/ubuntu/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/ubuntu/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/home/ubuntu/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/home/ubuntu/.m2/repository/io/opencensus/opencensus-api/0.19.2/opencensus-api-0.19.2.jar:/home/ubuntu/.m2/repository/io/opencensus/opencensus-contrib-grpc-metrics/0.19.2/opencensus-contrib-grpc-metrics-0.19.2.jar:/home/ubuntu/.m2/repository/io/grpc/grpc-protobuf/1.20.0/grpc-protobuf-1.20.0.jar:/home/ubuntu/.m2/repository/com/google/protobuf/protobuf-java/3.7.1/protobuf-java-3.7.1.jar:/home/ubuntu/.m2/repository/com/google/guava/guava/26.0-android/guava-26.0-android.jar:/home/ubuntu/.m2/repository/org/checkerframework/checker-compat-qual/2.5.2/checker-compat-qual-2.5.2.jar:/home/ubuntu/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/ubuntu/.m2/repository/com/google/api/grpc/proto-google-common-protos/1.12.0/proto-google-common-protos-1.12.0.jar:/home/ubuntu/.m2/repository/io/grpc/grpc-protobuf-lite/1.20.0/grpc-protobuf-lite-1.20.0.jar:/home/ubuntu/.m2/repository/io/grpc/grpc-stub/1.20.0/grpc-stub-1.20.0.jar:/home/ubuntu/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/ubuntu/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/ubuntu/.m2/repository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar:"/>
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
@@ -16,9 +24,15 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+<<<<<<< HEAD
     <property name="sun.java.command" value="/home/aditya/CaneCompanion/GPS-MicroService/target/surefire/surefirebooter4612363771084817404.jar /home/aditya/CaneCompanion/GPS-MicroService/target/surefire 2019-05-03T21-53-32_504-jvmRun1 surefire3031721501059521266tmp surefire_011747569976951979835tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/aditya/CaneCompanion/GPS-MicroService/target/test-classes:/home/aditya/CaneCompanion/GPS-MicroService/target/classes:/home/aditya/.m2/repository/io/grpc/grpc-netty-shaded/1.20.0/grpc-netty-shaded-1.20.0.jar:/home/aditya/.m2/repository/io/grpc/grpc-core/1.20.0/grpc-core-1.20.0.jar:/home/aditya/.m2/repository/io/grpc/grpc-context/1.20.0/grpc-context-1.20.0.jar:/home/aditya/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar:/home/aditya/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.2/error_prone_annotations-2.3.2.jar:/home/aditya/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/aditya/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/home/aditya/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/home/aditya/.m2/repository/io/opencensus/opencensus-api/0.19.2/opencensus-api-0.19.2.jar:/home/aditya/.m2/repository/io/opencensus/opencensus-contrib-grpc-metrics/0.19.2/opencensus-contrib-grpc-metrics-0.19.2.jar:/home/aditya/.m2/repository/io/grpc/grpc-protobuf/1.20.0/grpc-protobuf-1.20.0.jar:/home/aditya/.m2/repository/com/google/protobuf/protobuf-java/3.7.1/protobuf-java-3.7.1.jar:/home/aditya/.m2/repository/com/google/guava/guava/26.0-android/guava-26.0-android.jar:/home/aditya/.m2/repository/org/checkerframework/checker-compat-qual/2.5.2/checker-compat-qual-2.5.2.jar:/home/aditya/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/aditya/.m2/repository/com/google/api/grpc/proto-google-common-protos/1.12.0/proto-google-common-protos-1.12.0.jar:/home/aditya/.m2/repository/io/grpc/grpc-protobuf-lite/1.20.0/grpc-protobuf-lite-1.20.0.jar:/home/aditya/.m2/repository/io/grpc/grpc-stub/1.20.0/grpc-stub-1.20.0.jar:/home/aditya/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/aditya/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/aditya/.m2/repository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar:"/>
+=======
+    <property name="sun.java.command" value="/home/ubuntu/CaneCompanion/GPS-MicroService/target/surefire/surefirebooter9674445598678879111.jar /home/ubuntu/CaneCompanion/GPS-MicroService/target/surefire 2019-05-04T05-10-53_816-jvmRun1 surefire13248154141450170074tmp surefire_017828158361395421806tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/ubuntu/CaneCompanion/GPS-MicroService/target/test-classes:/home/ubuntu/CaneCompanion/GPS-MicroService/target/classes:/home/ubuntu/.m2/repository/io/grpc/grpc-netty-shaded/1.20.0/grpc-netty-shaded-1.20.0.jar:/home/ubuntu/.m2/repository/io/grpc/grpc-core/1.20.0/grpc-core-1.20.0.jar:/home/ubuntu/.m2/repository/io/grpc/grpc-context/1.20.0/grpc-context-1.20.0.jar:/home/ubuntu/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar:/home/ubuntu/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.2/error_prone_annotations-2.3.2.jar:/home/ubuntu/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/ubuntu/.m2/repository/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar:/home/ubuntu/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/home/ubuntu/.m2/repository/io/opencensus/opencensus-api/0.19.2/opencensus-api-0.19.2.jar:/home/ubuntu/.m2/repository/io/opencensus/opencensus-contrib-grpc-metrics/0.19.2/opencensus-contrib-grpc-metrics-0.19.2.jar:/home/ubuntu/.m2/repository/io/grpc/grpc-protobuf/1.20.0/grpc-protobuf-1.20.0.jar:/home/ubuntu/.m2/repository/com/google/protobuf/protobuf-java/3.7.1/protobuf-java-3.7.1.jar:/home/ubuntu/.m2/repository/com/google/guava/guava/26.0-android/guava-26.0-android.jar:/home/ubuntu/.m2/repository/org/checkerframework/checker-compat-qual/2.5.2/checker-compat-qual-2.5.2.jar:/home/ubuntu/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/ubuntu/.m2/repository/com/google/api/grpc/proto-google-common-protos/1.12.0/proto-google-common-protos-1.12.0.jar:/home/ubuntu/.m2/repository/io/grpc/grpc-protobuf-lite/1.20.0/grpc-protobuf-lite-1.20.0.jar:/home/ubuntu/.m2/repository/io/grpc/grpc-stub/1.20.0/grpc-stub-1.20.0.jar:/home/ubuntu/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/ubuntu/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/ubuntu/.m2/repository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar:"/>
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/aditya"/>
     <property name="user.language" value="en"/>
@@ -26,13 +40,21 @@
     <property name="java.version.date" value="2019-01-15"/>
     <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
     <property name="file.separator" value="/"/>
+<<<<<<< HEAD
     <property name="basedir" value="/home/aditya/CaneCompanion/GPS-MicroService"/>
+=======
+    <property name="basedir" value="/home/ubuntu/CaneCompanion/GPS-MicroService"/>
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+<<<<<<< HEAD
     <property name="surefire.real.class.path" value="/home/aditya/CaneCompanion/GPS-MicroService/target/surefire/surefirebooter4612363771084817404.jar"/>
+=======
+    <property name="surefire.real.class.path" value="/home/ubuntu/CaneCompanion/GPS-MicroService/target/surefire/surefirebooter9674445598678879111.jar"/>
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.2+9-Ubuntu-3ubuntu118.10.3"/>
     <property name="user.name" value="aditya"/>
@@ -45,7 +67,11 @@
     <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="java.version" value="11.0.2"/>
+<<<<<<< HEAD
     <property name="user.dir" value="/home/aditya/CaneCompanion/GPS-MicroService"/>
+=======
+    <property name="user.dir" value="/home/ubuntu/CaneCompanion/GPS-MicroService"/>
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
@@ -57,5 +83,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
+<<<<<<< HEAD
   <testcase name="shouldAnswerWithTrue" classname="com.prerepa.gps.AppTest" time="0.003"/>
+=======
+  <testcase name="shouldAnswerWithTrue" classname="com.prerepa.gps.AppTest" time="0.004"/>
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
 </testsuite>

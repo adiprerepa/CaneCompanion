@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.prerepa.gps.AppTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s - in com.prerepa.gps.AppTest
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 s - in com.prerepa.gps.AppTest
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882

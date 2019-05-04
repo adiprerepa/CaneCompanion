@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuite tests="1" failures="0" name="com.prerepa.accounts.AppTest" time="0.003" errors="0" skipped="0">
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.prerepa.accounts.AppTest" time="0.017" tests="1" errors="0" skipped="0" failures="0">
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
   <properties>
     <property name="os.detected.version" value="4.18"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -15,12 +20,28 @@
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
+<<<<<<< HEAD
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/aditya/CaneCompanion/AccountsMicroservice"/>
+=======
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/ubuntu/CaneCompanion/AccountsMicroservice/target/surefire/surefirebooter4721916370488319524.jar /home/ubuntu/CaneCompanion/AccountsMicroservice/target/surefire 2019-05-04T05-15-16_924-jvmRun1 surefire9545777379635573813tmp surefire_09805863240467115490tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/ubuntu/CaneCompanion/AccountsMicroservice/target/test-classes:/home/ubuntu/CaneCompanion/AccountsMicroservice/target/classes:/home/ubuntu/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/ubuntu/.m2/repository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar:/home/ubuntu/.m2/repository/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/ubuntu"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2019-01-15"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/ubuntu/CaneCompanion/AccountsMicroservice"/>
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="os.detected.release.like.debian" value="true"/>
     <property name="java.runtime.version" value="11.0.2+9-Ubuntu-3ubuntu118.10.3"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+<<<<<<< HEAD
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="os.detected.release.version" value="18.10"/>
@@ -38,6 +59,9 @@
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="55.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+=======
+    <property name="surefire.real.class.path" value="/home/ubuntu/CaneCompanion/AccountsMicroservice/target/surefire/surefirebooter4721916370488319524.jar"/>
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.detected.name" value="linux"/>
     <property name="os.version" value="4.18.0-17-generic"/>
@@ -71,5 +95,9 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
+<<<<<<< HEAD
   <testcase classname="com.prerepa.accounts.AppTest" name="testApp" time="0.003"/>
+=======
+  <testcase name="testApp" classname="com.prerepa.accounts.AppTest" time="0"/>
+>>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
 </testsuite>
