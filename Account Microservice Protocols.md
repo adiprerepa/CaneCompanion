@@ -78,7 +78,9 @@ $ git pull origin master
 Now, your changes will be on the server, and you can deploy them as seen in the instructions above.
 
 ### Data flow in the Microservice
+
 So this microservice relies on gRPC to send data. The inteface sends cane id and user to check with mysql, and registry from web servers just inserts into mysql. There are checks for accounts happening quite often, but that is it.
+
 ### Todos
 
  - Finish this markdown
