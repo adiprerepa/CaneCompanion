@@ -31,7 +31,7 @@ public class Database {
 			while (retrieved.next()) {
 				String username = retrieved.getString("username");
 				String password = retrieved.getString("password");
-				if (username.equals(user.username) && password.equals(user.password)) {
+				if (username.equals(user.userName) && password.equals(user.password)) {
 					user.setValues(retrieved);
 					exists = true;
 				} else {
@@ -52,7 +52,7 @@ public class Database {
 			ResultSet caneIdRetrieved = caneStatement.executeQuery(exec);
 			
 			while(caneIdRetrieved.next()) {
-				if (caneIdRetrieved.getString("CaneID").equals(caneId) && caneIdRetrieved.getString("Username").equals(user)) {
+				if (caneIdRetrieved.getString("CaneID").equals(caneID) && caneIdRetrieved.getString("Username").equals(user)) {
 					caneExists = true;
 				} else {
 					continue;

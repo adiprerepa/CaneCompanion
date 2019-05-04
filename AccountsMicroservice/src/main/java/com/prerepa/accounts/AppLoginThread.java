@@ -25,10 +25,11 @@ public class AppLoginThread extends Thread {
 	@Override
 	public void run() {
 		try {
+
 			String userName = input.readUTF();
 			String password = input.readUTF();
 			User user = new User(userName, password);
-			if (userDatabase.userExists(userName, password)) {
+			if (userDatabase.userExists(user)) {
 				output.writeUTF("Exists");
 				System.out.println("Exists");
 				user.sendValues(output);

@@ -24,12 +24,16 @@ public class CaneIDThread extends Thread {
 
 	@Override
 	public void run() {
-		String claimUser = dataInput.readUTF();
-		String caneID = dataInput.readUTF();
-		if (caneDB.checkCaneID(claimUser, caneID)) {
-			dataOutput.writeUTF("Exists");
-		} else {
-			dataOutput.writeUTF("Doesn't Exist");
+		try {
+			String claimUser = dataInput.readUTF();
+			String caneID = dataInput.readUTF();
+			if (caneDB.checkCaneID(claimUser, caneID)) {
+				dataOutput.writeUTF("Exists");
+			} else {
+				dataOutput.writeUTF("Doesn't Exist");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 }

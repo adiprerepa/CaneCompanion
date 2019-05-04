@@ -1,37 +1,33 @@
-package com.prerepa.gps;
+package com.prerepa.gps
 
-import java.net.Socket;
-import java.io.DataOutputStream;
-import java.io.DataInputStream;
+import java.net.Socket
+import java.io.DataOutputStream
+import java.io.DataInputStream
 
-public class AppThread extends Thread {
+class AppThread(private val appSocket: Socket, private val mysqlDb: Database) : Thread() {
+    private var dataInput: DataInputStream? = null
+    private var dataOutput: DataOutputStream? = null
 
-	private Socket appSocket;
-	private DataInputStream dataInput;
-	private DataOutputStream dataOutput;
-	private Database mysqlDb;
+    init {
+        try {
+            dataInput = DataInputStream(appSocket.getInputStream())
+            dataOutput = DataOutputStream(appSocket.getOutputStream())
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
 
-	public AppThread(Socket appSocket, Database mysqlDb) {
-		this.appSocket = appSocket;
-		this.mysqlDb = mysqlDb;
-		try {
-			dataInput = new DataInputStream(appSocket.getInputStream());
-			dataOutput = new DataOutputStream(appSocket.getOutputStream());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+    }
 
-	@Override
-	public void run() {
-		try {
-			int id = dataInput.readInt();
-			String username = dataInput.readUTF();
-			String coordinates = mysqlDb.retrieveCoordinates(username, id);
-			dataOutput.writeUTF(coordinates);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+    override fun run() {
+        try {
+            val id = dataInput!!.readInt()
+            val username = dataInput!!.readUTF()
+            val coordinates = mysqlDb.retrieveCoordinates(username, id)
+            dataOutput!!.writeUTF(coordinates)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+    }
 }
 

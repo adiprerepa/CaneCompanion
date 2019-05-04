@@ -1,5 +1,6 @@
 package com.prerepa.accounts;
 
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -20,7 +21,12 @@ public class CaneIDServer extends Thread {
 
 	@Override
 	public void run() {
-		Socket idSocket = caneServer.accept();
+		Socket idSocket = null;
+		try {
+			idSocket = caneServer.accept();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		CaneIDThread ct = new CaneIDThread(idSocket, database);
 		ct.start();
 	}
