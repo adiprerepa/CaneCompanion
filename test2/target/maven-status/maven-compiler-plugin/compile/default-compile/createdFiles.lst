@@ -20,5 +20,5 @@ Greeter$1.class
 io/grpc/examples/helloworld/HelloRequest$Builder.class
 io/grpc/examples/helloworld/GreeterGrpc.class
 io/grpc/examples/helloworld/GreeterGrpc$MethodHandlers.class
-io/grpc/examples/helloworld/HelloRequestOrBuilder.class
 io/grpc/examples/helloworld/HelloRequest.class
+io/grpc/examples/helloworld/HelloRequestOrBuilder.class

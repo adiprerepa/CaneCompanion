@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.prerepa.accounts.AppTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.prerepa.accounts.AppTest
->>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
