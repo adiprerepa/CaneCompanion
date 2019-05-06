@@ -3,7 +3,7 @@ package com.prerepa.gps;
 public class Main {
 
 	public static void main(String[] args) {
-		String databaseUrl = "jdbc:mysql://13.57.106.230/coordinates";
+		String databaseUrl = "jdbc:mysql://mysqldatabaseinstance.cppavwcwtqiz.us-west-1.rds.amazonaws.com/coordinates";
                 String username = "adi";
                 String password = "adirocks";
                 Database mysqlDb = new Database(databaseUrl, username, password);

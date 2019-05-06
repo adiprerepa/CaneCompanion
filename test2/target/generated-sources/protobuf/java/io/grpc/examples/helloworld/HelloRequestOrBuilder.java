@@ -16,4 +16,14 @@ public interface HelloRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNameBytes();
+
+  /**
+   * <code>string last = 2;</code>
+   */
+  java.lang.String getLast();
+  /**
+   * <code>string last = 2;</code>
+   */
+  com.google.protobuf.ByteString
+      getLastBytes();
 }

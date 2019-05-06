@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 /home/aditya/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/Main.java
 /home/aditya/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/CaneThread.java
 /home/aditya/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/AppServer.java
 /home/aditya/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/Database.java
 /home/aditya/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/CaneServer.java
 /home/aditya/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/AppThread.java
-=======
-/home/ubuntu/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/AppThread.java
-/home/ubuntu/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/CaneThread.java
-/home/ubuntu/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/Database.java
-/home/ubuntu/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/CaneServer.java
-/home/ubuntu/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/AppServer.java
-/home/ubuntu/CaneCompanion/GPS-MicroService/src/main/java/com/prerepa/gps/Main.java
->>>>>>> 2dd5ec8a87e6e900a83d45a02ff9d6dff1fb0882

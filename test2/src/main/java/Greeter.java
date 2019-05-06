@@ -50,7 +50,6 @@ public class Greeter {
             responseObserver.onCompleted();
         }
     }
-
     public static void main(String[] args) throws Throwable {
         final Greeter g = new Greeter();
         g.start();
