@@ -44,7 +44,8 @@ public class Greeter {
 
         @Override
         public void sayHello(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
-            HelloReply rep = HelloReply.newBuilder().setMessage("Yo yo yo" + req.getName()).build();
+            String name = req.getName();
+            HelloReply rep = HelloReply.newBuilder().setMessage("Yo yo yo" + name).build();
 
             responseObserver.onNext(rep);
             responseObserver.onCompleted();

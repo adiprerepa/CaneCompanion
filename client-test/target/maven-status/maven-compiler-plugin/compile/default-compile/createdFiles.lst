@@ -4,7 +4,6 @@ com/prerepa/gps/GpsServiceGrpc$GpsServiceBlockingStub.class
 com/prerepa/gps/CoordinatesIDOrBuilder.class
 com/prerepa/gps/GpsServiceGrpc$GpsServiceMethodDescriptorSupplier.class
 com/prerepa/gps/Coordinates$Builder.class
-com/prerepa/test/App.class
 com/prerepa/gps/InsertStatus$1.class
 com/prerepa/gps/CoordinatesOrBuilder.class
 com/prerepa/gps/CaneCoordinates$Builder.class

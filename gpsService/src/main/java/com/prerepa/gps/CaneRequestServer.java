@@ -47,7 +47,6 @@ public class CaneRequestServer extends Thread {
     }
 
     static class CaneRequestBase extends GpsServiceGrpc.GpsServiceImplBase {
-
         @Override
         public void caneInsert(CaneCoordinates caneCoordinates, StreamObserver<InsertStatus> responseObserver) {
             double latitude = caneCoordinates.getLatitude();

@@ -43,20 +43,20 @@ public class ClientTest {
 		logger.info("Response: " + resp);
 	}
 
-	public void sendCoordinates(double latitude, double longitude, String username) {
-		logger.info("About to send latitude and longitude...");
-		CaneCoordinates caneCoordinates = CaneCoordinates.newBuilder().setLatitude(latitude).setLongitude(longitude).setUsername(username).build();
-		InsertStatus status;
-		try {
-			status = blockingStub.caneInsert(caneCoordinates);
-		} catch (StatusRuntimeException e) {
-			e.printStackTrace();
-			logger.log(Level.WARNING, "RPC failed: {0}", e.getStatus());
-			return;
-		}
-		Integer inStatus = status.getInsertStatus();
-		logger.info(inStatus.toString());
-	}
+//	public void sendCoordinates(double latitude, double longitude, String username) {
+//		logger.info("About to send latitude and longitude...");
+//		CaneCoordinates caneCoordinates = CaneCoordinates.newBuilder().setLatitude(latitude).setLongitude(longitude).setUsername(username).build();
+//		InsertStatus status;
+//		try {
+//			status = blockingStub.caneInsert(caneCoordinates);
+//		} catch (StatusRuntimeException e) {
+//			e.printStackTrace();
+//			logger.log(Level.WARNING, "RPC failed: {0}", e.getStatus());
+//			return;
+//		}
+//		Integer inStatus = status.getInsertStatus();
+//		logger.info(inStatus.toString());
+//	}
 
 	public static void main(String[] args) throws Exception {
 		ClientTest clientTest = new ClientTest("localhost", 23612);
@@ -65,7 +65,7 @@ public class ClientTest {
 			int id = 1;
 			double latitude = 35.1;
 			double longitude = 21.3;
-			clientTest.sendCoordinates(latitude, longitude, user);
+//			clientTest.sendCoordinates(latitude, longitude, user);
 			clientTest.coordinatesRequest(user, id);
 		} finally {
 			clientTest.shutdown();

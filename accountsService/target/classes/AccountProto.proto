@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.prerepa.accounts";
+option java_outer_classname = "AccountsProto";
+option objc_class_prefix = "ACCP";
+
+package accounts;
+
+service AccountsService {
+	
+	rpc Login(UserCredentials) returns (UserInfo) {}
+
+	rpc Register(UserRegisterInfo) returns (RegisterSuccessful) {}
+}
+
+message UserCredentials {
+	string username = 1;
+	string password = 2;
+}
+ 
+message UserInfo {
+	string phonenumber = 1;
+	string email = 2;
+}
+
+message UserRegisterInfo {
+	string email = 1;
+ 	string phone = 2;
+	string username = 3;
+	string password = 4;
+	int32 age = 5;
+	string name = 6;
+}
+
+message RegisterSuccessful {
+	bool success = 1;
+	string errorMessage = 2;
+}
+
+
