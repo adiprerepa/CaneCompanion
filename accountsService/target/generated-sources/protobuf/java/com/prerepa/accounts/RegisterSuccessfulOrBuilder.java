@@ -11,14 +11,4 @@ public interface RegisterSuccessfulOrBuilder extends
    * <code>bool success = 1;</code>
    */
   boolean getSuccess();
-
-  /**
-   * <code>string errorMessage = 2;</code>
-   */
-  java.lang.String getErrorMessage();
-  /**
-   * <code>string errorMessage = 2;</code>
-   */
-  com.google.protobuf.ByteString
-      getErrorMessageBytes();
 }

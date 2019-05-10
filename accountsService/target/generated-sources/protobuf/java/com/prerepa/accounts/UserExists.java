@@ -4,18 +4,18 @@
 package com.prerepa.accounts;
 
 /**
- * Protobuf type {@code accounts.RegisterSuccessful}
+ * Protobuf type {@code accounts.UserExists}
  */
-public  final class RegisterSuccessful extends
+public  final class UserExists extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:accounts.RegisterSuccessful)
-    RegisterSuccessfulOrBuilder {
+    // @@protoc_insertion_point(message_implements:accounts.UserExists)
+    UserExistsOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use RegisterSuccessful.newBuilder() to construct.
-  private RegisterSuccessful(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UserExists.newBuilder() to construct.
+  private UserExists(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private RegisterSuccessful() {
+  private UserExists() {
   }
 
   @java.lang.Override
@@ -23,7 +23,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private RegisterSuccessful(
+  private UserExists(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -44,7 +44,7 @@ private static final long serialVersionUID = 0L;
             break;
           case 8: {
 
-            success_ = input.readBool();
+            userExists_ = input.readBool();
             break;
           }
           default: {
@@ -68,24 +68,24 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.prerepa.accounts.AccountsProto.internal_static_accounts_RegisterSuccessful_descriptor;
+    return com.prerepa.accounts.AccountsProto.internal_static_accounts_UserExists_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.prerepa.accounts.AccountsProto.internal_static_accounts_RegisterSuccessful_fieldAccessorTable
+    return com.prerepa.accounts.AccountsProto.internal_static_accounts_UserExists_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.prerepa.accounts.RegisterSuccessful.class, com.prerepa.accounts.RegisterSuccessful.Builder.class);
+            com.prerepa.accounts.UserExists.class, com.prerepa.accounts.UserExists.Builder.class);
   }
 
-  public static final int SUCCESS_FIELD_NUMBER = 1;
-  private boolean success_;
+  public static final int USEREXISTS_FIELD_NUMBER = 1;
+  private boolean userExists_;
   /**
-   * <code>bool success = 1;</code>
+   * <code>bool userExists = 1;</code>
    */
-  public boolean getSuccess() {
-    return success_;
+  public boolean getUserExists() {
+    return userExists_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -102,8 +102,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (success_ != false) {
-      output.writeBool(1, success_);
+    if (userExists_ != false) {
+      output.writeBool(1, userExists_);
     }
     unknownFields.writeTo(output);
   }
@@ -114,9 +114,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (success_ != false) {
+    if (userExists_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(1, success_);
+        .computeBoolSize(1, userExists_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -128,13 +128,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.prerepa.accounts.RegisterSuccessful)) {
+    if (!(obj instanceof com.prerepa.accounts.UserExists)) {
       return super.equals(obj);
     }
-    com.prerepa.accounts.RegisterSuccessful other = (com.prerepa.accounts.RegisterSuccessful) obj;
+    com.prerepa.accounts.UserExists other = (com.prerepa.accounts.UserExists) obj;
 
-    if (getSuccess()
-        != other.getSuccess()) return false;
+    if (getUserExists()
+        != other.getUserExists()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -146,77 +146,77 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+    hash = (37 * hash) + USEREXISTS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getSuccess());
+        getUserExists());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.prerepa.accounts.RegisterSuccessful parseFrom(
+  public static com.prerepa.accounts.UserExists parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseFrom(
+  public static com.prerepa.accounts.UserExists parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseFrom(
+  public static com.prerepa.accounts.UserExists parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseFrom(
+  public static com.prerepa.accounts.UserExists parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseFrom(byte[] data)
+  public static com.prerepa.accounts.UserExists parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseFrom(
+  public static com.prerepa.accounts.UserExists parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseFrom(java.io.InputStream input)
+  public static com.prerepa.accounts.UserExists parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseFrom(
+  public static com.prerepa.accounts.UserExists parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseDelimitedFrom(java.io.InputStream input)
+  public static com.prerepa.accounts.UserExists parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseDelimitedFrom(
+  public static com.prerepa.accounts.UserExists parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseFrom(
+  public static com.prerepa.accounts.UserExists parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.prerepa.accounts.RegisterSuccessful parseFrom(
+  public static com.prerepa.accounts.UserExists parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -229,7 +229,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.prerepa.accounts.RegisterSuccessful prototype) {
+  public static Builder newBuilder(com.prerepa.accounts.UserExists prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -245,26 +245,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code accounts.RegisterSuccessful}
+   * Protobuf type {@code accounts.UserExists}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:accounts.RegisterSuccessful)
-      com.prerepa.accounts.RegisterSuccessfulOrBuilder {
+      // @@protoc_insertion_point(builder_implements:accounts.UserExists)
+      com.prerepa.accounts.UserExistsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.prerepa.accounts.AccountsProto.internal_static_accounts_RegisterSuccessful_descriptor;
+      return com.prerepa.accounts.AccountsProto.internal_static_accounts_UserExists_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.prerepa.accounts.AccountsProto.internal_static_accounts_RegisterSuccessful_fieldAccessorTable
+      return com.prerepa.accounts.AccountsProto.internal_static_accounts_UserExists_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.prerepa.accounts.RegisterSuccessful.class, com.prerepa.accounts.RegisterSuccessful.Builder.class);
+              com.prerepa.accounts.UserExists.class, com.prerepa.accounts.UserExists.Builder.class);
     }
 
-    // Construct using com.prerepa.accounts.RegisterSuccessful.newBuilder()
+    // Construct using com.prerepa.accounts.UserExists.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      success_ = false;
+      userExists_ = false;
 
       return this;
     }
@@ -290,17 +290,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.prerepa.accounts.AccountsProto.internal_static_accounts_RegisterSuccessful_descriptor;
+      return com.prerepa.accounts.AccountsProto.internal_static_accounts_UserExists_descriptor;
     }
 
     @java.lang.Override
-    public com.prerepa.accounts.RegisterSuccessful getDefaultInstanceForType() {
-      return com.prerepa.accounts.RegisterSuccessful.getDefaultInstance();
+    public com.prerepa.accounts.UserExists getDefaultInstanceForType() {
+      return com.prerepa.accounts.UserExists.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.prerepa.accounts.RegisterSuccessful build() {
-      com.prerepa.accounts.RegisterSuccessful result = buildPartial();
+    public com.prerepa.accounts.UserExists build() {
+      com.prerepa.accounts.UserExists result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -308,9 +308,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.prerepa.accounts.RegisterSuccessful buildPartial() {
-      com.prerepa.accounts.RegisterSuccessful result = new com.prerepa.accounts.RegisterSuccessful(this);
-      result.success_ = success_;
+    public com.prerepa.accounts.UserExists buildPartial() {
+      com.prerepa.accounts.UserExists result = new com.prerepa.accounts.UserExists(this);
+      result.userExists_ = userExists_;
       onBuilt();
       return result;
     }
@@ -349,18 +349,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.prerepa.accounts.RegisterSuccessful) {
-        return mergeFrom((com.prerepa.accounts.RegisterSuccessful)other);
+      if (other instanceof com.prerepa.accounts.UserExists) {
+        return mergeFrom((com.prerepa.accounts.UserExists)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.prerepa.accounts.RegisterSuccessful other) {
-      if (other == com.prerepa.accounts.RegisterSuccessful.getDefaultInstance()) return this;
-      if (other.getSuccess() != false) {
-        setSuccess(other.getSuccess());
+    public Builder mergeFrom(com.prerepa.accounts.UserExists other) {
+      if (other == com.prerepa.accounts.UserExists.getDefaultInstance()) return this;
+      if (other.getUserExists() != false) {
+        setUserExists(other.getUserExists());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -377,11 +377,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.prerepa.accounts.RegisterSuccessful parsedMessage = null;
+      com.prerepa.accounts.UserExists parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.prerepa.accounts.RegisterSuccessful) e.getUnfinishedMessage();
+        parsedMessage = (com.prerepa.accounts.UserExists) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -391,28 +391,28 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean success_ ;
+    private boolean userExists_ ;
     /**
-     * <code>bool success = 1;</code>
+     * <code>bool userExists = 1;</code>
      */
-    public boolean getSuccess() {
-      return success_;
+    public boolean getUserExists() {
+      return userExists_;
     }
     /**
-     * <code>bool success = 1;</code>
+     * <code>bool userExists = 1;</code>
      */
-    public Builder setSuccess(boolean value) {
+    public Builder setUserExists(boolean value) {
       
-      success_ = value;
+      userExists_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>bool success = 1;</code>
+     * <code>bool userExists = 1;</code>
      */
-    public Builder clearSuccess() {
+    public Builder clearUserExists() {
       
-      success_ = false;
+      userExists_ = false;
       onChanged();
       return this;
     }
@@ -429,41 +429,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:accounts.RegisterSuccessful)
+    // @@protoc_insertion_point(builder_scope:accounts.UserExists)
   }
 
-  // @@protoc_insertion_point(class_scope:accounts.RegisterSuccessful)
-  private static final com.prerepa.accounts.RegisterSuccessful DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:accounts.UserExists)
+  private static final com.prerepa.accounts.UserExists DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.prerepa.accounts.RegisterSuccessful();
+    DEFAULT_INSTANCE = new com.prerepa.accounts.UserExists();
   }
 
-  public static com.prerepa.accounts.RegisterSuccessful getDefaultInstance() {
+  public static com.prerepa.accounts.UserExists getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<RegisterSuccessful>
-      PARSER = new com.google.protobuf.AbstractParser<RegisterSuccessful>() {
+  private static final com.google.protobuf.Parser<UserExists>
+      PARSER = new com.google.protobuf.AbstractParser<UserExists>() {
     @java.lang.Override
-    public RegisterSuccessful parsePartialFrom(
+    public UserExists parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RegisterSuccessful(input, extensionRegistry);
+      return new UserExists(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<RegisterSuccessful> parser() {
+  public static com.google.protobuf.Parser<UserExists> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<RegisterSuccessful> getParserForType() {
+  public com.google.protobuf.Parser<UserExists> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.prerepa.accounts.RegisterSuccessful getDefaultInstanceForType() {
+  public com.prerepa.accounts.UserExists getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

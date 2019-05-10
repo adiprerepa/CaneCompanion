@@ -28,21 +28,21 @@ public final class AccountsServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.prerepa.accounts.UserCredentials,
-      com.prerepa.accounts.UserInfo> getLoginMethod;
+      com.prerepa.accounts.UserExists> getLoginMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Login",
       requestType = com.prerepa.accounts.UserCredentials.class,
-      responseType = com.prerepa.accounts.UserInfo.class,
+      responseType = com.prerepa.accounts.UserExists.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.prerepa.accounts.UserCredentials,
-      com.prerepa.accounts.UserInfo> getLoginMethod() {
-    io.grpc.MethodDescriptor<com.prerepa.accounts.UserCredentials, com.prerepa.accounts.UserInfo> getLoginMethod;
+      com.prerepa.accounts.UserExists> getLoginMethod() {
+    io.grpc.MethodDescriptor<com.prerepa.accounts.UserCredentials, com.prerepa.accounts.UserExists> getLoginMethod;
     if ((getLoginMethod = AccountsServiceGrpc.getLoginMethod) == null) {
       synchronized (AccountsServiceGrpc.class) {
         if ((getLoginMethod = AccountsServiceGrpc.getLoginMethod) == null) {
           AccountsServiceGrpc.getLoginMethod = getLoginMethod = 
-              io.grpc.MethodDescriptor.<com.prerepa.accounts.UserCredentials, com.prerepa.accounts.UserInfo>newBuilder()
+              io.grpc.MethodDescriptor.<com.prerepa.accounts.UserCredentials, com.prerepa.accounts.UserExists>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "accounts.AccountsService", "Login"))
@@ -50,7 +50,7 @@ public final class AccountsServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.prerepa.accounts.UserCredentials.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.prerepa.accounts.UserInfo.getDefaultInstance()))
+                  com.prerepa.accounts.UserExists.getDefaultInstance()))
                   .setSchemaDescriptor(new AccountsServiceMethodDescriptorSupplier("Login"))
                   .build();
           }
@@ -121,7 +121,7 @@ public final class AccountsServiceGrpc {
     /**
      */
     public void login(com.prerepa.accounts.UserCredentials request,
-        io.grpc.stub.StreamObserver<com.prerepa.accounts.UserInfo> responseObserver) {
+        io.grpc.stub.StreamObserver<com.prerepa.accounts.UserExists> responseObserver) {
       asyncUnimplementedUnaryCall(getLoginMethod(), responseObserver);
     }
 
@@ -139,7 +139,7 @@ public final class AccountsServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 com.prerepa.accounts.UserCredentials,
-                com.prerepa.accounts.UserInfo>(
+                com.prerepa.accounts.UserExists>(
                   this, METHODID_LOGIN)))
           .addMethod(
             getRegisterMethod(),
@@ -173,7 +173,7 @@ public final class AccountsServiceGrpc {
     /**
      */
     public void login(com.prerepa.accounts.UserCredentials request,
-        io.grpc.stub.StreamObserver<com.prerepa.accounts.UserInfo> responseObserver) {
+        io.grpc.stub.StreamObserver<com.prerepa.accounts.UserExists> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request, responseObserver);
     }
@@ -207,7 +207,7 @@ public final class AccountsServiceGrpc {
 
     /**
      */
-    public com.prerepa.accounts.UserInfo login(com.prerepa.accounts.UserCredentials request) {
+    public com.prerepa.accounts.UserExists login(com.prerepa.accounts.UserCredentials request) {
       return blockingUnaryCall(
           getChannel(), getLoginMethod(), getCallOptions(), request);
     }
@@ -240,7 +240,7 @@ public final class AccountsServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.prerepa.accounts.UserInfo> login(
+    public com.google.common.util.concurrent.ListenableFuture<com.prerepa.accounts.UserExists> login(
         com.prerepa.accounts.UserCredentials request) {
       return futureUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request);
@@ -277,7 +277,7 @@ public final class AccountsServiceGrpc {
       switch (methodId) {
         case METHODID_LOGIN:
           serviceImpl.login((com.prerepa.accounts.UserCredentials) request,
-              (io.grpc.stub.StreamObserver<com.prerepa.accounts.UserInfo>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.prerepa.accounts.UserExists>) responseObserver);
           break;
         case METHODID_REGISTER:
           serviceImpl.register((com.prerepa.accounts.UserRegisterInfo) request,

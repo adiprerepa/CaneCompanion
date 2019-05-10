@@ -4,22 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
 
-public class AccountsDatabase {
+class AccountsDatabase {
 
-    private String databaseUsername;
-    private String databasePassword;
     private Connection infoConnection, gpsConnection, wifiConnection, idConnection;
-    private String dbName;
 
-    public AccountsDatabase(String databaseUsername, String databasePassword, String dbName) {
-        this.databaseUsername = databaseUsername;
-        this.databasePassword = databasePassword;
-        this.dbName = dbName;
+    AccountsDatabase(String databaseUsername, String databasePassword) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://127.0.0.1/userinfo";
             infoConnection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/userinfo", databaseUsername, databasePassword);
             gpsConnection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/usergps", databaseUsername, databasePassword);
             wifiConnection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/userwifi", databaseUsername, databasePassword);
@@ -29,7 +21,7 @@ public class AccountsDatabase {
         }
     }
 
-    public boolean register(String registerUsername, String registerPassword, String registerPhoneNumber,
+    boolean register(String registerUsername, String registerPassword, String registerPhoneNumber,
                             String registerEmail, String registerName, int age) {
         boolean regStatus = true;
         try {
@@ -40,8 +32,6 @@ public class AccountsDatabase {
                 if (resultSet.getString("username").equals(registerUsername)){
                     regStatus = false;
                     break;
-                } else {
-                    continue;
                 }
             }
             if (regStatus) {
@@ -64,17 +54,21 @@ public class AccountsDatabase {
         return regStatus;
     }
 
-    public Authentication login(String username, String password) {
-        Authentication authentication = new Authentication();
+    boolean login(String username, String password) {
+        boolean userExists = false;
         String loginQuery = "SELECT username, password FROM users";
-        Statement loginStatement = infoConnection.createStatement();
-        ResultSet rs = loginStatement.executeQuery(loginQuery);
-        while (rs.next()) {
-            if (rs.getString("username").equals(username) && rs.getString("password").equals(password)) {
-                //TODO : Add what to do after authentication
-                //Signing off 5/8/19
+        try {
+            Statement loginStatement = infoConnection.createStatement();
+            ResultSet rs = loginStatement.executeQuery(loginQuery);
+            while (rs.next()) {
+                if (rs.getString("username").equals(username) && rs.getString("password").equals(password)) {
+                    userExists = true;
+                }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return userExists;
     }
 
 }

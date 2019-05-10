@@ -9,7 +9,7 @@ package accounts;
 
 service AccountsService {
 	
-	rpc Login(UserCredentials) returns (UserInfo) {}
+	rpc Login(UserCredentials) returns (UserExists) {}
 
 	rpc Register(UserRegisterInfo) returns (RegisterSuccessful) {}
 }
@@ -19,9 +19,8 @@ message UserCredentials {
 	string password = 2;
 }
  
-message UserInfo {
-	string phonenumber = 1;
-	string email = 2;
+message UserExists {
+	bool userExists = 1;
 }
 
 message UserRegisterInfo {
@@ -35,7 +34,6 @@ message UserRegisterInfo {
 
 message RegisterSuccessful {
 	bool success = 1;
-	string errorMessage = 2;
 }
 
 

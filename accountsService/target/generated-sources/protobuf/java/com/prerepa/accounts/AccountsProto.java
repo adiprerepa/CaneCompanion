@@ -20,10 +20,10 @@ public final class AccountsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_accounts_UserCredentials_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_accounts_UserInfo_descriptor;
+    internal_static_accounts_UserExists_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_accounts_UserInfo_fieldAccessorTable;
+      internal_static_accounts_UserExists_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_accounts_UserRegisterInfo_descriptor;
   static final 
@@ -45,17 +45,16 @@ public final class AccountsProto {
     java.lang.String[] descriptorData = {
       "\n\022AccountProto.proto\022\010accounts\"5\n\017UserCr" +
       "edentials\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030" +
-      "\002 \001(\t\".\n\010UserInfo\022\023\n\013phonenumber\030\001 \001(\t\022\r" +
-      "\n\005email\030\002 \001(\t\"o\n\020UserRegisterInfo\022\r\n\005ema" +
-      "il\030\001 \001(\t\022\r\n\005phone\030\002 \001(\t\022\020\n\010username\030\003 \001(" +
-      "\t\022\020\n\010password\030\004 \001(\t\022\013\n\003age\030\005 \001(\005\022\014\n\004name" +
-      "\030\006 \001(\t\";\n\022RegisterSuccessful\022\017\n\007success\030" +
-      "\001 \001(\010\022\024\n\014errorMessage\030\002 \001(\t2\223\001\n\017Accounts" +
-      "Service\0228\n\005Login\022\031.accounts.UserCredenti" +
-      "als\032\022.accounts.UserInfo\"\000\022F\n\010Register\022\032." +
-      "accounts.UserRegisterInfo\032\034.accounts.Reg" +
-      "isterSuccessful\"\000B.\n\024com.prerepa.account" +
-      "sB\rAccountsProtoP\001\242\002\004ACCPb\006proto3"
+      "\002 \001(\t\" \n\nUserExists\022\022\n\nuserExists\030\001 \001(\010\"" +
+      "o\n\020UserRegisterInfo\022\r\n\005email\030\001 \001(\t\022\r\n\005ph" +
+      "one\030\002 \001(\t\022\020\n\010username\030\003 \001(\t\022\020\n\010password\030" +
+      "\004 \001(\t\022\013\n\003age\030\005 \001(\005\022\014\n\004name\030\006 \001(\t\"%\n\022Regi" +
+      "sterSuccessful\022\017\n\007success\030\001 \001(\0102\225\001\n\017Acco" +
+      "untsService\022:\n\005Login\022\031.accounts.UserCred" +
+      "entials\032\024.accounts.UserExists\"\000\022F\n\010Regis" +
+      "ter\022\032.accounts.UserRegisterInfo\032\034.accoun" +
+      "ts.RegisterSuccessful\"\000B.\n\024com.prerepa.a" +
+      "ccountsB\rAccountsProtoP\001\242\002\004ACCPb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -75,12 +74,12 @@ public final class AccountsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_accounts_UserCredentials_descriptor,
         new java.lang.String[] { "Username", "Password", });
-    internal_static_accounts_UserInfo_descriptor =
+    internal_static_accounts_UserExists_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_accounts_UserInfo_fieldAccessorTable = new
+    internal_static_accounts_UserExists_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_accounts_UserInfo_descriptor,
-        new java.lang.String[] { "Phonenumber", "Email", });
+        internal_static_accounts_UserExists_descriptor,
+        new java.lang.String[] { "UserExists", });
     internal_static_accounts_UserRegisterInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_accounts_UserRegisterInfo_fieldAccessorTable = new
@@ -92,7 +91,7 @@ public final class AccountsProto {
     internal_static_accounts_RegisterSuccessful_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_accounts_RegisterSuccessful_descriptor,
-        new java.lang.String[] { "Success", "ErrorMessage", });
+        new java.lang.String[] { "Success", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
