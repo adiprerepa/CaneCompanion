@@ -4,21 +4,12 @@ from google.cloud.vision import types
 import io
 import os
 
-
-os.system("export GOOGLE_APPLICATION_CREDENTIALS='%s'" % os.getcwd() + "/cred.json")
-
 client = vision.ImageAnnotatorClient()
 
-file_name = os.path.join(os.path.dirname(__file__), 'png.jpg')
+def getImageLabels(imageContent):
+    return client.label_detection(image=types.Image(content=imageContent)).label_annotations
 
-with io.open(file_name, 'rb') as image_file:
-    content = image_file.read()
+with open("cat.jpg", 'rb') as f:
+  contents = f.read()
 
-image = types.Image(content=content)
-
-response = client.label_detection(image=image)
-labels = response.label_annotations
-
-print('Labels:')
-for label in labels:
-    print(label.description)
+print(getImageLabels(contents))
