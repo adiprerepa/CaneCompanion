@@ -1,5 +1,8 @@
 package com.prerepa.accounts;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,12 +13,21 @@ class AccountsDatabase {
     private Connection infoConnection, gpsConnection, wifiConnection, idConnection;
 
     AccountsDatabase(String databaseUsername, String databasePassword) {
+        BufferedReader br;
+        String ip = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            infoConnection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/userinfo", databaseUsername, databasePassword);
-            gpsConnection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/usergps", databaseUsername, databasePassword);
-            wifiConnection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/userwifi", databaseUsername, databasePassword);
-            idConnection = DriverManager.getConnection("jdbc:mysql://127.0.0.1/usercanes", databaseUsername, databasePassword);
+            br = new BufferedReader(new FileReader("/home/aditya/CaneCompanion/ipAddrs"));
+            ip = br.readLine();
+            System.out.println(ip);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            infoConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/userinfo", databaseUsername, databasePassword);
+            gpsConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/usergps", databaseUsername, databasePassword);
+            wifiConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/userwifi", databaseUsername, databasePassword);
+            idConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/usercanes", databaseUsername, databasePassword);
         } catch (Exception e) {
             e.printStackTrace();
         }

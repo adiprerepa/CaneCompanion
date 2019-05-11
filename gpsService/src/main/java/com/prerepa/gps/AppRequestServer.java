@@ -6,8 +6,8 @@ import io.grpc.stub.StreamObserver;
 
 public class AppRequestServer extends Thread {
 
-	static Database db;
-	public AppRequestServer(Database db) {
+	static GpsDatabase db;
+	public AppRequestServer(GpsDatabase db) {
 		this.db = db;
 	}
 
@@ -51,8 +51,7 @@ public class AppRequestServer extends Thread {
 		public void appRetrieve(CoordinatesID coordinatesID, StreamObserver<Coordinates> responseObserver) {
 
 			String username = coordinatesID.getUsername();
-			int id = coordinatesID.getCoordinatesID();
-			String retrieved = db.retrieveCoordinates(username, id);
+			String retrieved = db.retrieveCoordinates(username);
 			String[] coordinatesAsString = retrieved.split(" ");
 			double [] coordinatesInArray = new double[coordinatesAsString.length];
 			for (int i = 0; i < coordinatesAsString.length; i++) {

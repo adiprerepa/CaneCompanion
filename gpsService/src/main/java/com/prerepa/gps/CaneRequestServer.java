@@ -4,11 +4,11 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
-public class CaneRequestServer extends Thread {
+class CaneRequestServer extends Thread {
 
-    static Database db;
-    public CaneRequestServer(Database db) {
-        this.db = db;
+    private static GpsDatabase db;
+    CaneRequestServer(GpsDatabase db) {
+        CaneRequestServer.db = db;
     }
 
     private Server server;
@@ -40,7 +40,7 @@ public class CaneRequestServer extends Thread {
         }
     }
 
-    public void blockUntilShutdown() throws Throwable {
+    void blockUntilShutdown() throws Throwable {
         if (server != null) {
             server.awaitTermination();
         }

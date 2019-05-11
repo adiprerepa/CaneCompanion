@@ -28,7 +28,7 @@ public class Database {
 	public int insertCoordinates(String username, double latitude, double longitude) {
 		try {
 			Statement stmt = conn.createStatement();
-			String insertStatement = String.format("INSERT INTO coordinates(id, username, latitude, longitude) values (null, '%s', %d, %d)", username, Math.round(latitude * 100) / 100, Math.round(longitude * 100) / 100);
+			String insertStatement = String.format("INSERT INTO usergp(id, username, latitude, longitude) values (null, '%s', %d, %d)", username, Math.round(latitude * 100) / 100, Math.round(longitude * 100) / 100);
 			stmt.executeUpdate(insertStatement);
 			System.out.println("Insert Successful");
 			return 200;
@@ -47,8 +47,7 @@ public class Database {
 			ResultSet retrievedResults = stmt.executeQuery(retrieveStatement);
 
 			while (retrievedResults.next()) {
-				int tmp1 = retrievedResults.getInt("id");
-				String user = retrievedResults.getString("username");
+
 				if (retrievedResults.getInt("id") == id && retrievedResults.getString("username").equals(username)) {
 					Double latitude = retrievedResults.getDouble("latitude");
 					Double longitude = retrievedResults.getDouble("longitude");
