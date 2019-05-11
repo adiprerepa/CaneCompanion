@@ -33,6 +33,6 @@ message CoordinatesID {
 }
 
 message Coordinates {
-	double latitude = 1;
-	double longitude = 2;
+	repeated double latitude = 1;
+	repeated double longitude = 2;
 }
