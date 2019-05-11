@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package helloworld;
+
+service VisionMicroservice {
+  rpc AppCall (AppRequest) returns (AppReply) {}
+  rpc CaneCall (CaneRequest) returns (CaneReply) {}
+}
+
+message AppRequest {
+    string username = 1;
+}
+
+message AppReply {
+    string what = 1;
+    string time = 2;
+}
+
+message CaneRequest {
+    string username = 1;
+    string image = 2;
+}
+
+message CaneReply {
+    string wav_file = 1;
+}
