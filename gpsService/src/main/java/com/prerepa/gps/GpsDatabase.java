@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class GpsDatabase {
+class GpsDatabase {
 
     private Connection gpsConnection;
 
@@ -18,7 +18,7 @@ public class GpsDatabase {
         }
     }
 
-    public int insertCoordinates(String username, double latitude, double longitude) {
+    int insertCoordinates(String username, double latitude, double longitude) {
         try {
             Statement stmt = gpsConnection.createStatement();
             String insertStatement = String.format("INSERT INTO %s (latitude, longitude) values (%d, %d)", username, Math.round(latitude * 100) / 100, Math.round(longitude * 100) / 100);
@@ -33,29 +33,24 @@ public class GpsDatabase {
     }
 
     public CoordinateResponse retrieveCoordinates(String username) {
-        /**
-         * TODO : Return coodinatesresp and call as repeated in proto to handoff o app
-         */
-        String coordinates = null;
+        CoordinateResponse returnResp = new CoordinateResponse();
         try {
             Statement stmt = gpsConnection.createStatement();
             String retrieveStatement = "SELECT * FROM " + username;
             ResultSet retrievedResults = stmt.executeQuery(retrieveStatement);
 
             while (retrievedResults.next()) {
-
-                if (retrievedResults.getString("username").equals(username)) {
-                    Double latitude = retrievedResults.getDouble("latitude");
-                    Double longitude = retrievedResults.getDouble("longitude");
-                    coordinates = String.format("%s %s", latitude.toString(), longitude.toString());
-                } else {
-                    continue;
-                }
+                Double latitude = retrievedResults.getDouble("latitude");
+                Double longitude = retrievedResults.getDouble("longitude");
+                returnResp.latitudes.add(latitude);
+                returnResp.longitudes.add(longitude);
+                returnResp.pullStatus = 200;
             }
         } catch (Exception e) {
             e.printStackTrace();
+            returnResp.pullStatus = 1;
         }
-        return coordinates;
+        return returnResp;
     }
 
 }
