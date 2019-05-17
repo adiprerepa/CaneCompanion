@@ -8,12 +8,33 @@ public interface CoordinatesOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>double latitude = 1;</code>
+   * <code>repeated double latitude = 1;</code>
    */
-  double getLatitude();
+  java.util.List<java.lang.Double> getLatitudeList();
+  /**
+   * <code>repeated double latitude = 1;</code>
+   */
+  int getLatitudeCount();
+  /**
+   * <code>repeated double latitude = 1;</code>
+   */
+  double getLatitude(int index);
 
   /**
-   * <code>double longitude = 2;</code>
+   * <code>repeated double longitude = 2;</code>
    */
-  double getLongitude();
+  java.util.List<java.lang.Double> getLongitudeList();
+  /**
+   * <code>repeated double longitude = 2;</code>
+   */
+  int getLongitudeCount();
+  /**
+   * <code>repeated double longitude = 2;</code>
+   */
+  double getLongitude(int index);
+
+  /**
+   * <code>int32 status = 3;</code>
+   */
+  int getStatus();
 }

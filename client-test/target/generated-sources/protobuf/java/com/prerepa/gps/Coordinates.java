@@ -16,6 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Coordinates() {
+    latitude_ = emptyDoubleList();
+    longitude_ = emptyDoubleList();
   }
 
   @java.lang.Override
@@ -43,13 +45,50 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 9: {
-
-            latitude_ = input.readDouble();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              latitude_ = newDoubleList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            latitude_.addDouble(input.readDouble());
+            break;
+          }
+          case 10: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              latitude_ = newDoubleList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              latitude_.addDouble(input.readDouble());
+            }
+            input.popLimit(limit);
             break;
           }
           case 17: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              longitude_ = newDoubleList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            longitude_.addDouble(input.readDouble());
+            break;
+          }
+          case 18: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+              longitude_ = newDoubleList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              longitude_.addDouble(input.readDouble());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 24: {
 
-            longitude_ = input.readDouble();
+            status_ = input.readInt32();
             break;
           }
           default: {
@@ -67,6 +106,12 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        latitude_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        longitude_.makeImmutable(); // C
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -84,22 +129,60 @@ private static final long serialVersionUID = 0L;
             com.prerepa.gps.Coordinates.class, com.prerepa.gps.Coordinates.Builder.class);
   }
 
+  private int bitField0_;
   public static final int LATITUDE_FIELD_NUMBER = 1;
-  private double latitude_;
+  private com.google.protobuf.Internal.DoubleList latitude_;
   /**
-   * <code>double latitude = 1;</code>
+   * <code>repeated double latitude = 1;</code>
    */
-  public double getLatitude() {
+  public java.util.List<java.lang.Double>
+      getLatitudeList() {
     return latitude_;
   }
+  /**
+   * <code>repeated double latitude = 1;</code>
+   */
+  public int getLatitudeCount() {
+    return latitude_.size();
+  }
+  /**
+   * <code>repeated double latitude = 1;</code>
+   */
+  public double getLatitude(int index) {
+    return latitude_.getDouble(index);
+  }
+  private int latitudeMemoizedSerializedSize = -1;
 
   public static final int LONGITUDE_FIELD_NUMBER = 2;
-  private double longitude_;
+  private com.google.protobuf.Internal.DoubleList longitude_;
   /**
-   * <code>double longitude = 2;</code>
+   * <code>repeated double longitude = 2;</code>
    */
-  public double getLongitude() {
+  public java.util.List<java.lang.Double>
+      getLongitudeList() {
     return longitude_;
+  }
+  /**
+   * <code>repeated double longitude = 2;</code>
+   */
+  public int getLongitudeCount() {
+    return longitude_.size();
+  }
+  /**
+   * <code>repeated double longitude = 2;</code>
+   */
+  public double getLongitude(int index) {
+    return longitude_.getDouble(index);
+  }
+  private int longitudeMemoizedSerializedSize = -1;
+
+  public static final int STATUS_FIELD_NUMBER = 3;
+  private int status_;
+  /**
+   * <code>int32 status = 3;</code>
+   */
+  public int getStatus() {
+    return status_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -116,11 +199,23 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (latitude_ != 0D) {
-      output.writeDouble(1, latitude_);
+    getSerializedSize();
+    if (getLatitudeList().size() > 0) {
+      output.writeUInt32NoTag(10);
+      output.writeUInt32NoTag(latitudeMemoizedSerializedSize);
     }
-    if (longitude_ != 0D) {
-      output.writeDouble(2, longitude_);
+    for (int i = 0; i < latitude_.size(); i++) {
+      output.writeDoubleNoTag(latitude_.getDouble(i));
+    }
+    if (getLongitudeList().size() > 0) {
+      output.writeUInt32NoTag(18);
+      output.writeUInt32NoTag(longitudeMemoizedSerializedSize);
+    }
+    for (int i = 0; i < longitude_.size(); i++) {
+      output.writeDoubleNoTag(longitude_.getDouble(i));
+    }
+    if (status_ != 0) {
+      output.writeInt32(3, status_);
     }
     unknownFields.writeTo(output);
   }
@@ -131,13 +226,31 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (latitude_ != 0D) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(1, latitude_);
+    {
+      int dataSize = 0;
+      dataSize = 8 * getLatitudeList().size();
+      size += dataSize;
+      if (!getLatitudeList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      latitudeMemoizedSerializedSize = dataSize;
     }
-    if (longitude_ != 0D) {
+    {
+      int dataSize = 0;
+      dataSize = 8 * getLongitudeList().size();
+      size += dataSize;
+      if (!getLongitudeList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      longitudeMemoizedSerializedSize = dataSize;
+    }
+    if (status_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(2, longitude_);
+        .computeInt32Size(3, status_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -154,12 +267,12 @@ private static final long serialVersionUID = 0L;
     }
     com.prerepa.gps.Coordinates other = (com.prerepa.gps.Coordinates) obj;
 
-    if (java.lang.Double.doubleToLongBits(getLatitude())
-        != java.lang.Double.doubleToLongBits(
-            other.getLatitude())) return false;
-    if (java.lang.Double.doubleToLongBits(getLongitude())
-        != java.lang.Double.doubleToLongBits(
-            other.getLongitude())) return false;
+    if (!getLatitudeList()
+        .equals(other.getLatitudeList())) return false;
+    if (!getLongitudeList()
+        .equals(other.getLongitudeList())) return false;
+    if (getStatus()
+        != other.getStatus()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -171,12 +284,16 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + LATITUDE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getLatitude()));
-    hash = (37 * hash) + LONGITUDE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getLongitude()));
+    if (getLatitudeCount() > 0) {
+      hash = (37 * hash) + LATITUDE_FIELD_NUMBER;
+      hash = (53 * hash) + getLatitudeList().hashCode();
+    }
+    if (getLongitudeCount() > 0) {
+      hash = (37 * hash) + LONGITUDE_FIELD_NUMBER;
+      hash = (53 * hash) + getLongitudeList().hashCode();
+    }
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + getStatus();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -310,9 +427,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      latitude_ = 0D;
-
-      longitude_ = 0D;
+      latitude_ = emptyDoubleList();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      longitude_ = emptyDoubleList();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      status_ = 0;
 
       return this;
     }
@@ -340,8 +459,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.prerepa.gps.Coordinates buildPartial() {
       com.prerepa.gps.Coordinates result = new com.prerepa.gps.Coordinates(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        latitude_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
       result.latitude_ = latitude_;
+      if (((bitField0_ & 0x00000002) != 0)) {
+        longitude_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
       result.longitude_ = longitude_;
+      result.status_ = status_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -390,11 +521,28 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.prerepa.gps.Coordinates other) {
       if (other == com.prerepa.gps.Coordinates.getDefaultInstance()) return this;
-      if (other.getLatitude() != 0D) {
-        setLatitude(other.getLatitude());
+      if (!other.latitude_.isEmpty()) {
+        if (latitude_.isEmpty()) {
+          latitude_ = other.latitude_;
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ensureLatitudeIsMutable();
+          latitude_.addAll(other.latitude_);
+        }
+        onChanged();
       }
-      if (other.getLongitude() != 0D) {
-        setLongitude(other.getLongitude());
+      if (!other.longitude_.isEmpty()) {
+        if (longitude_.isEmpty()) {
+          longitude_ = other.longitude_;
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ensureLongitudeIsMutable();
+          longitude_.addAll(other.longitude_);
+        }
+        onChanged();
+      }
+      if (other.getStatus() != 0) {
+        setStatus(other.getStatus());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -424,55 +572,164 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    private int bitField0_;
 
-    private double latitude_ ;
-    /**
-     * <code>double latitude = 1;</code>
-     */
-    public double getLatitude() {
-      return latitude_;
+    private com.google.protobuf.Internal.DoubleList latitude_ = emptyDoubleList();
+    private void ensureLatitudeIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        latitude_ = mutableCopy(latitude_);
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
-     * <code>double latitude = 1;</code>
+     * <code>repeated double latitude = 1;</code>
      */
-    public Builder setLatitude(double value) {
-      
-      latitude_ = value;
+    public java.util.List<java.lang.Double>
+        getLatitudeList() {
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(latitude_) : latitude_;
+    }
+    /**
+     * <code>repeated double latitude = 1;</code>
+     */
+    public int getLatitudeCount() {
+      return latitude_.size();
+    }
+    /**
+     * <code>repeated double latitude = 1;</code>
+     */
+    public double getLatitude(int index) {
+      return latitude_.getDouble(index);
+    }
+    /**
+     * <code>repeated double latitude = 1;</code>
+     */
+    public Builder setLatitude(
+        int index, double value) {
+      ensureLatitudeIsMutable();
+      latitude_.setDouble(index, value);
       onChanged();
       return this;
     }
     /**
-     * <code>double latitude = 1;</code>
+     * <code>repeated double latitude = 1;</code>
+     */
+    public Builder addLatitude(double value) {
+      ensureLatitudeIsMutable();
+      latitude_.addDouble(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated double latitude = 1;</code>
+     */
+    public Builder addAllLatitude(
+        java.lang.Iterable<? extends java.lang.Double> values) {
+      ensureLatitudeIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, latitude_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated double latitude = 1;</code>
      */
     public Builder clearLatitude() {
-      
-      latitude_ = 0D;
+      latitude_ = emptyDoubleList();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
 
-    private double longitude_ ;
-    /**
-     * <code>double longitude = 2;</code>
-     */
-    public double getLongitude() {
-      return longitude_;
+    private com.google.protobuf.Internal.DoubleList longitude_ = emptyDoubleList();
+    private void ensureLongitudeIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        longitude_ = mutableCopy(longitude_);
+        bitField0_ |= 0x00000002;
+       }
     }
     /**
-     * <code>double longitude = 2;</code>
+     * <code>repeated double longitude = 2;</code>
      */
-    public Builder setLongitude(double value) {
-      
-      longitude_ = value;
+    public java.util.List<java.lang.Double>
+        getLongitudeList() {
+      return ((bitField0_ & 0x00000002) != 0) ?
+               java.util.Collections.unmodifiableList(longitude_) : longitude_;
+    }
+    /**
+     * <code>repeated double longitude = 2;</code>
+     */
+    public int getLongitudeCount() {
+      return longitude_.size();
+    }
+    /**
+     * <code>repeated double longitude = 2;</code>
+     */
+    public double getLongitude(int index) {
+      return longitude_.getDouble(index);
+    }
+    /**
+     * <code>repeated double longitude = 2;</code>
+     */
+    public Builder setLongitude(
+        int index, double value) {
+      ensureLongitudeIsMutable();
+      longitude_.setDouble(index, value);
       onChanged();
       return this;
     }
     /**
-     * <code>double longitude = 2;</code>
+     * <code>repeated double longitude = 2;</code>
+     */
+    public Builder addLongitude(double value) {
+      ensureLongitudeIsMutable();
+      longitude_.addDouble(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated double longitude = 2;</code>
+     */
+    public Builder addAllLongitude(
+        java.lang.Iterable<? extends java.lang.Double> values) {
+      ensureLongitudeIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, longitude_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated double longitude = 2;</code>
      */
     public Builder clearLongitude() {
+      longitude_ = emptyDoubleList();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+
+    private int status_ ;
+    /**
+     * <code>int32 status = 3;</code>
+     */
+    public int getStatus() {
+      return status_;
+    }
+    /**
+     * <code>int32 status = 3;</code>
+     */
+    public Builder setStatus(int value) {
       
-      longitude_ = 0D;
+      status_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 status = 3;</code>
+     */
+    public Builder clearStatus() {
+      
+      status_ = 0;
       onChanged();
       return this;
     }

@@ -11,7 +11,7 @@ class GpsDatabase {
 
     GpsDatabase(String url, String databaseUsername, String databasePassword) {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             gpsConnection = DriverManager.getConnection(url, databaseUsername, databasePassword);
         } catch (Exception e) {
             e.printStackTrace();

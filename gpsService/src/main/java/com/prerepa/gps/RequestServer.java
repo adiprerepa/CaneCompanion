@@ -15,13 +15,13 @@ public class RequestServer extends Thread {
 
 	@Override
 	public void start() {
-		int port = 23612;
+		int port = 11612;
 		try {
 			server = ServerBuilder.forPort(port)
 				.addService(new RequestBase())
 				.build()
 				.start();
-			System.out.println("App Server started");
+			System.out.println("Server started");
 			Runtime.getRuntime().addShutdownHook(new Thread() {
 				@Override
 				public void run() {

@@ -40,8 +40,9 @@ public class SendDataTest {
         System.out.println(in);
     }
 
+
     public static void main(String[] args) {
-        SendDataTest d = new SendDataTest("localhost", 48162);
+        SendDataTest d = new SendDataTest("localhost", 11612);
         try {
             d.send(52.3, 54.2, "Aditya");
         } finally {

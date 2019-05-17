@@ -24,6 +24,8 @@ message CaneCoordinates {
 
 // The response message containing the greetings
 message InsertStatus {
+
+		
 	int32 insertStatus = 1;
 }
 

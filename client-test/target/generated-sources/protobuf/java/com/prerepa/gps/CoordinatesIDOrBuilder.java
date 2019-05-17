@@ -8,17 +8,20 @@ public interface CoordinatesIDOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   *int32 coordinatesID = 2;
+   * </pre>
+   *
    * <code>string username = 1;</code>
    */
   java.lang.String getUsername();
   /**
+   * <pre>
+   *int32 coordinatesID = 2;
+   * </pre>
+   *
    * <code>string username = 1;</code>
    */
   com.google.protobuf.ByteString
       getUsernameBytes();
-
-  /**
-   * <code>int32 coordinatesID = 2;</code>
-   */
-  int getCoordinatesID();
 }

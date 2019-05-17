@@ -49,11 +49,6 @@ private static final long serialVersionUID = 0L;
             username_ = s;
             break;
           }
-          case 16: {
-
-            coordinatesID_ = input.readInt32();
-            break;
-          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -89,6 +84,10 @@ private static final long serialVersionUID = 0L;
   public static final int USERNAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object username_;
   /**
+   * <pre>
+   *int32 coordinatesID = 2;
+   * </pre>
+   *
    * <code>string username = 1;</code>
    */
   public java.lang.String getUsername() {
@@ -104,6 +103,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   *int32 coordinatesID = 2;
+   * </pre>
+   *
    * <code>string username = 1;</code>
    */
   public com.google.protobuf.ByteString
@@ -118,15 +121,6 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
-  }
-
-  public static final int COORDINATESID_FIELD_NUMBER = 2;
-  private int coordinatesID_;
-  /**
-   * <code>int32 coordinatesID = 2;</code>
-   */
-  public int getCoordinatesID() {
-    return coordinatesID_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -146,9 +140,6 @@ private static final long serialVersionUID = 0L;
     if (!getUsernameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
     }
-    if (coordinatesID_ != 0) {
-      output.writeInt32(2, coordinatesID_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -160,10 +151,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getUsernameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
-    }
-    if (coordinatesID_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, coordinatesID_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -182,8 +169,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getUsername()
         .equals(other.getUsername())) return false;
-    if (getCoordinatesID()
-        != other.getCoordinatesID()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -197,8 +182,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + USERNAME_FIELD_NUMBER;
     hash = (53 * hash) + getUsername().hashCode();
-    hash = (37 * hash) + COORDINATESID_FIELD_NUMBER;
-    hash = (53 * hash) + getCoordinatesID();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -334,8 +317,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       username_ = "";
 
-      coordinatesID_ = 0;
-
       return this;
     }
 
@@ -363,7 +344,6 @@ private static final long serialVersionUID = 0L;
     public com.prerepa.gps.CoordinatesID buildPartial() {
       com.prerepa.gps.CoordinatesID result = new com.prerepa.gps.CoordinatesID(this);
       result.username_ = username_;
-      result.coordinatesID_ = coordinatesID_;
       onBuilt();
       return result;
     }
@@ -416,9 +396,6 @@ private static final long serialVersionUID = 0L;
         username_ = other.username_;
         onChanged();
       }
-      if (other.getCoordinatesID() != 0) {
-        setCoordinatesID(other.getCoordinatesID());
-      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -450,6 +427,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object username_ = "";
     /**
+     * <pre>
+     *int32 coordinatesID = 2;
+     * </pre>
+     *
      * <code>string username = 1;</code>
      */
     public java.lang.String getUsername() {
@@ -465,6 +446,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *int32 coordinatesID = 2;
+     * </pre>
+     *
      * <code>string username = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -481,6 +466,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *int32 coordinatesID = 2;
+     * </pre>
+     *
      * <code>string username = 1;</code>
      */
     public Builder setUsername(
@@ -494,6 +483,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *int32 coordinatesID = 2;
+     * </pre>
+     *
      * <code>string username = 1;</code>
      */
     public Builder clearUsername() {
@@ -503,6 +496,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *int32 coordinatesID = 2;
+     * </pre>
+     *
      * <code>string username = 1;</code>
      */
     public Builder setUsernameBytes(
@@ -513,32 +510,6 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       username_ = value;
-      onChanged();
-      return this;
-    }
-
-    private int coordinatesID_ ;
-    /**
-     * <code>int32 coordinatesID = 2;</code>
-     */
-    public int getCoordinatesID() {
-      return coordinatesID_;
-    }
-    /**
-     * <code>int32 coordinatesID = 2;</code>
-     */
-    public Builder setCoordinatesID(int value) {
-      
-      coordinatesID_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 coordinatesID = 2;</code>
-     */
-    public Builder clearCoordinatesID() {
-      
-      coordinatesID_ = 0;
       onChanged();
       return this;
     }
