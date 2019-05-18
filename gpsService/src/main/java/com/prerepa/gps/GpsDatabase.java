@@ -36,12 +36,14 @@ class GpsDatabase {
         CoordinateResponse returnResp = new CoordinateResponse();
         try {
             Statement stmt = gpsConnection.createStatement();
-            String retrieveStatement = "SELECT * FROM " + username;
+            //String retrieveStatement = "SELECT latitude, longitude " + username + "_gps";
+            String retrieveStatement = "SELECT * FROM akshay";
             ResultSet retrievedResults = stmt.executeQuery(retrieveStatement);
 
             while (retrievedResults.next()) {
-                Double latitude = retrievedResults.getDouble("latitude");
-                Double longitude = retrievedResults.getDouble("longitude");
+                double latitude = retrievedResults.getDouble("latitude");
+                double longitude = retrievedResults.getDouble("longitude");
+                System.out.printf("%d %d", latitude, longitude);
                 returnResp.latitudes.add(latitude);
                 returnResp.longitudes.add(longitude);
                 returnResp.pullStatus = 200;
