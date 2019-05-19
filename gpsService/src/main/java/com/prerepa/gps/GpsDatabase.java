@@ -21,7 +21,7 @@ class GpsDatabase {
     int insertCoordinates(String username, double latitude, double longitude) {
         try {
             Statement stmt = gpsConnection.createStatement();
-            String insertStatement = String.format("INSERT INTO %s (latitude, longitude) values (%d, %d)", username, Math.round(latitude * 100) / 100, Math.round(longitude * 100) / 100);
+            String insertStatement = String.format("INSERT INTO %s (latitude, longitude) values (%f, %f)", username, Math.round(latitude * 100) / 100, Math.round(longitude * 100) / 100);
             stmt.executeUpdate(insertStatement);
             System.out.println("Insert Successful");
             return 200;
@@ -36,14 +36,16 @@ class GpsDatabase {
         CoordinateResponse returnResp = new CoordinateResponse();
         try {
             Statement stmt = gpsConnection.createStatement();
-            //String retrieveStatement = "SELECT latitude, longitude " + username + "_gps";
-            String retrieveStatement = "SELECT * FROM akshay";
+            String retrieveStatement = "SELECT * FROM " + username + "_gps";
+            //String retrieveStatement = "SELECT * FROM aditya_gps";
             ResultSet retrievedResults = stmt.executeQuery(retrieveStatement);
 
             while (retrievedResults.next()) {
-                double latitude = retrievedResults.getDouble("latitude");
-                double longitude = retrievedResults.getDouble("longitude");
-                System.out.printf("%d %d", latitude, longitude);
+                Double latitude = retrievedResults.getDouble("latitude");
+                Double longitude = retrievedResults.getDouble("longitude");
+//                System.out.println(latitude);
+//                System.out.println(longitude);
+//                System.out.printf("%f %f", latitude, longitude);
                 returnResp.latitudes.add(latitude);
                 returnResp.longitudes.add(longitude);
                 returnResp.pullStatus = 200;

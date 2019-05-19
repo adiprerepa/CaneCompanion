@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb1355c-d97d-4e90-9cac-92fa8bc6101d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/test/GpsClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/DatabaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client-test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/info.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../gpsService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/GpsDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/GpsDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/RequestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/RequestServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/RequestServer$RequestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/RequestServer$RequestBase.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -181,7 +181,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558218673629" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558226331709" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../gpsService" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -267,7 +267,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="331" y="27" width="1289" height="741" extended-state="4" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19147225" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

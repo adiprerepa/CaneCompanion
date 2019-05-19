@@ -51,9 +51,17 @@ public class RequestServer extends Thread {
 		public void appRetrieve(CoordinatesID coordinatesID, StreamObserver<Coordinates> responseObserver) {
 			String username = coordinatesID.getUsername();
 			CoordinateResponse response = db.retrieveCoordinates(username);
-			Coordinates coordinates = Coordinates.newBuilder().addAllLatitude(response.latitudes).addAllLongitude(response.longitudes).build();
-			responseObserver.onNext(coordinates);
-			responseObserver.onCompleted();
+			if (response.latitudes != null) {
+				Coordinates coordinates = Coordinates.newBuilder().addAllLatitude(response.latitudes).addAllLongitude(response.longitudes).setStatus(response.pullStatus).build();
+				responseObserver.onNext(coordinates);
+				responseObserver.onCompleted();
+			} else {
+				Coordinates coordinates = Coordinates.newBuilder().setStatus(400).build();
+				responseObserver.onNext(coordinates);
+				responseObserver.onCompleted();
+				System.err.println("THE DATABASE'S VALUES ARE NOT POPULATED");
+			}
+
 		}
 
 		@Override
