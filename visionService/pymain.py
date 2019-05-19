@@ -18,8 +18,8 @@ class Application(vision_pb2_grpc.VisionMicroserviceServicer):
         self.cursor = self.database.cursor()
 
     def image2text(self, image_content):
-        return self.vision_client.label_detection(image=types.Image(content=image_content)).label_annotations[0].description
-
+        #return self.vision_client.label_detection(image=types.Image(content=image_content)).label_annotations[0].description
+        return '. '.join(map(lambda a: a.description, self.vision_client.label_detection(image=types.Image(content=image_content)).label_annotations))
     def text2speech(self, text):
         tts = gTTS(text)
         tts.save("tts.mp3")
@@ -48,7 +48,7 @@ class Application(vision_pb2_grpc.VisionMicroserviceServicer):
     def main(self):
         server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
         vision_pb2_grpc.add_VisionMicroserviceServicer_to_server(self, server)
-        server.add_insecure_port("[::]:50051")
+        server.add_insecure_port("[::]:50055")
         server.start()
         try:
             while True:

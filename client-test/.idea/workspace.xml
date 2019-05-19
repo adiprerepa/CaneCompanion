@@ -2,24 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb1355c-d97d-4e90-9cac-92fa8bc6101d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../accountsService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../accountsService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accountsService/src/main/java/com/prerepa/accounts/AccountsDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../accountsService/src/main/java/com/prerepa/accounts/AccountsDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accountsService/src/main/java/com/prerepa/accounts/LoginServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../accountsService/src/main/java/com/prerepa/accounts/LoginServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accountsService/src/main/java/com/prerepa/accounts/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../accountsService/src/main/java/com/prerepa/accounts/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accountsService/src/main/java/com/prerepa/accounts/SqlTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accountsService/src/main/proto/AccountProto.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../accountsService/src/main/proto/AccountProto.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../accountsService/target/classes/com/prerepa/accounts/SqlTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gpsService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/DatabaseTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/RequestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/RequestServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/DatabaseTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/RequestServer$RequestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/RequestServer$RequestBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/RequestServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/RequestServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ipAddrs" beforeDir="false" afterPath="$PROJECT_DIR$/../ipAddrs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/CoordinateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/CoordinateResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/GpsDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gpsService/src/main/java/com/prerepa/gps/GpsDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/CaneCoordinates$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/CaneCoordinates$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/CaneCoordinates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/CaneCoordinatesOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/CoordinateResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/Coordinates$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/Coordinates$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/Coordinates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/CoordinatesID$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/CoordinatesID$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/CoordinatesID.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/CoordinatesIDOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/CoordinatesOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsProto$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsProto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsServiceGrpc$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsServiceGrpc$GpsServiceBaseDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsServiceGrpc$GpsServiceBlockingStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsServiceGrpc$GpsServiceFileDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsServiceGrpc$GpsServiceFutureStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsServiceGrpc$GpsServiceImplBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsServiceGrpc$GpsServiceMethodDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsServiceGrpc$GpsServiceStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsServiceGrpc$MethodHandlers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/GpsServiceGrpc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/InsertStatus$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/InsertStatus$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/InsertStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/InsertStatusOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/RequestServer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/RequestServer$RequestBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gpsService/target/classes/com/prerepa/gps/RequestServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../visionService/pymain.py" beforeDir="false" afterPath="$PROJECT_DIR$/../visionService/pymain.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,41 +54,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/proto/info.proto">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/prerepa/test/ClientTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/prerepa/test/GpsClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -100,6 +87,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -108,70 +96,10 @@
               <item name="client-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="client-test" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="client-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="proto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
-              <item name="protobuf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client-test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
-              <item name="protobuf" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,9 +193,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1493268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15116279" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />

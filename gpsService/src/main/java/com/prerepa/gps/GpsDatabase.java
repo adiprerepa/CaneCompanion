@@ -43,11 +43,13 @@ class GpsDatabase {
             while (retrievedResults.next()) {
                 Double latitude = retrievedResults.getDouble("latitude");
                 Double longitude = retrievedResults.getDouble("longitude");
+                String timestamp = retrievedResults.getString("timestamp");
 //                System.out.println(latitude);
 //                System.out.println(longitude);
 //                System.out.printf("%f %f", latitude, longitude);
                 returnResp.latitudes.add(latitude);
                 returnResp.longitudes.add(longitude);
+                returnResp.timestamps.add(timestamp);
                 returnResp.pullStatus = 200;
             }
         } catch (Exception e) {
