@@ -7,20 +7,22 @@ service VisionMicroservice {
   rpc CaneCall (CaneRequest) returns (CaneReply) {}
 }
 
+message CaneRequest {
+    string username = 1;
+    bytes png_data = 2;
+}
+
+message CaneReply {
+    bytes wav_data = 1;
+}
+
 message AppRequest {
     string username = 1;
 }
 
 message AppReply {
-    string what = 1;
+    string object_name = 1;
     string time = 2;
 }
 
-message CaneRequest {
-    string username = 1;
-    string image = 2;
-}
 
-message CaneReply {
-    string wav_file = 1;
-}
