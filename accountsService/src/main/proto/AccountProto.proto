@@ -21,6 +21,7 @@ message UserCredentials {
  
 message UserExists {
 	bool userExists = 1;
+	bool allowCanePairing = 2;
 }
 
 message UserRegisterInfo {

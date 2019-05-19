@@ -1,10 +1,13 @@
 package com.prerepa.accounts;
 
+import java.io.File;
+
 public class Main {
 
     public static void main(String[] args) throws Throwable {
-        AccountsDatabase accountsDatabase = new AccountsDatabase("aditya", "adityapc");
-        LoginServer loginServer = new LoginServer(accountsDatabase);
+        File consts = new File("/home/aditya/CaneCompanion/ipAddrs");
+        AccountsDatabase accountsDatabase = new AccountsDatabase(consts);
+        LoginServer loginServer = new LoginServer(accountsDatabase, consts);
         loginServer.start();
         loginServer.blockUntilShutdown();
     }
