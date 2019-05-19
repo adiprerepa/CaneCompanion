@@ -4,10 +4,10 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
-public class RequestServer extends Thread {
+class RequestServer extends Thread {
 
-	static GpsDatabase db;
-	public RequestServer(GpsDatabase db) {
+	private static GpsDatabase db;
+	RequestServer(GpsDatabase db) {
 		RequestServer.db = db;
 	}
 
@@ -34,7 +34,7 @@ public class RequestServer extends Thread {
 		}
 	}
 
-	public void blockUntilShutdown() throws Throwable {
+	void blockUntilShutdown() throws Throwable {
 		if (server != null) {
 			server.awaitTermination();
 		}
