@@ -4,10 +4,10 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
-public class RequestServer extends Thread {
+class RequestServer extends Thread {
 
-	static GpsDatabase db;
-	public RequestServer(GpsDatabase db) {
+	private static GpsDatabase db;
+	RequestServer(GpsDatabase db) {
 		RequestServer.db = db;
 	}
 
@@ -34,7 +34,7 @@ public class RequestServer extends Thread {
 		}
 	}
 
-	public void blockUntilShutdown() throws Throwable {
+	void blockUntilShutdown() throws Throwable {
 		if (server != null) {
 			server.awaitTermination();
 		}
@@ -51,9 +51,17 @@ public class RequestServer extends Thread {
 		public void appRetrieve(CoordinatesID coordinatesID, StreamObserver<Coordinates> responseObserver) {
 			String username = coordinatesID.getUsername();
 			CoordinateResponse response = db.retrieveCoordinates(username);
-			Coordinates coordinates = Coordinates.newBuilder().addAllLatitude(response.latitudes).addAllLongitude(response.longitudes).build();
-			responseObserver.onNext(coordinates);
-			responseObserver.onCompleted();
+			if (response.latitudes != null) {
+				Coordinates coordinates = Coordinates.newBuilder().addAllLatitude(response.latitudes).addAllLongitude(response.longitudes).setStatus(response.pullStatus).build();
+				responseObserver.onNext(coordinates);
+				responseObserver.onCompleted();
+			} else {
+				Coordinates coordinates = Coordinates.newBuilder().setStatus(400).build();
+				responseObserver.onNext(coordinates);
+				responseObserver.onCompleted();
+				System.err.println("THE DATABASE'S VALUES ARE NOT POPULATED");
+			}
+
 		}
 
 		@Override

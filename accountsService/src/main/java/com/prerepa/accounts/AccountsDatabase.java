@@ -1,6 +1,7 @@
 package com.prerepa.accounts;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
@@ -12,22 +13,26 @@ class AccountsDatabase {
 
     private Connection infoConnection, gpsConnection, wifiConnection, idConnection;
 
-    AccountsDatabase(String databaseUsername, String databasePassword) {
+    AccountsDatabase(File constantsFile) {
         BufferedReader br;
         String ip = null;
+        String dbUser = null;
+        String dbPass = null;
         try {
-            br = new BufferedReader(new FileReader("/home/aditya/CaneCompanion/ipAddrs"));
+            br = new BufferedReader(new FileReader(constantsFile));
             ip = br.readLine();
+            dbUser = br.readLine();
+            dbPass = br.readLine();
             System.out.println(ip);
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            infoConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/userinfo", databaseUsername, databasePassword);
-            gpsConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/usergps", databaseUsername, databasePassword);
-            wifiConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/userwifi", databaseUsername, databasePassword);
-            idConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/usercanes", databaseUsername, databasePassword);
+            infoConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/userinfo", dbUser, dbPass);
+            gpsConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/usergps", dbUser, dbPass);
+            wifiConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/userwifi", dbUser, dbPass);
+            idConnection = DriverManager.getConnection("jdbc:mysql://" + ip + "/usercanes", dbUser, dbPass);
         } catch (Exception e) {
             e.printStackTrace();
         }

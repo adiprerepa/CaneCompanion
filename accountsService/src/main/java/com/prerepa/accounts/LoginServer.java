@@ -16,9 +16,8 @@ public class LoginServer extends Thread {
 
     @Override
     public void run() {
-        int port = 39623;
         try {
-            server = ServerBuilder.forPort(port)
+            server = ServerBuilder.forPort(45231)
                     .addService(new LoginRequest())
                     .build()
                     .start();

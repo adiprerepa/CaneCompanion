@@ -32,5 +32,6 @@
     <orderEntry type="library" name="Maven: io.grpc:grpc-protobuf-lite:1.20.0" level="project" />
     <orderEntry type="library" name="Maven: io.grpc:grpc-stub:1.20.0" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:jsr250-api:1.0" level="project" />
+    <orderEntry type="library" name="Bundled Protobuf Distribution" level="application" />
   </component>
 </module>
