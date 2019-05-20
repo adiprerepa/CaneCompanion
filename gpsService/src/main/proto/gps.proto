@@ -37,5 +37,6 @@ message CoordinatesID {
 message Coordinates {
 	repeated double latitude = 1;
 	repeated double longitude = 2;
-	int32 status = 3;
+	repeated string time = 3;
+	int32 status = 4;
 }
