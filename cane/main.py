@@ -13,13 +13,14 @@ butpin = 2
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(butpin, GPIO.IN)
 
-vision_channel = grpc.insecure_channel("10.0.1.202:50055")
+ip = "canecompaniont420.ddns.net"
+
+vision_channel = grpc.insecure_channel(ip + ":50055")
 vision_stub = vision_pb2_grpc.VisionMicroserviceStub(vision_channel)
-gps_channel = grpc.insecure_channel("10.0.1.202:11612")
+gps_channel = grpc.insecure_channel(ip + ":11612")
 gps_stub = gps_pb2_grpc.GpsServiceStub(gps_channel)
 
 camera = PiCamera()
-camera.start_preview()
 sleep(2)
 print("Ready")
 
@@ -62,6 +63,7 @@ try:
                 rfile.close()
                 os.system("omxplayer -o local response.mp3")
 
-except KeyboardInterrupt:
+except:
+    camera.close()
     thread.terminate()
     GPIO.cleanup()
