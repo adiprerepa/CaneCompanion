@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='gps',
   syntax='proto3',
   serialized_options=_b('\n\017com.prerepa.gpsB\010GpsProtoP\001\242\002\003HLW'),
-  serialized_pb=_b('\n\tgps.proto\x12\x03gps\"H\n\x0f\x43\x61neCoordinates\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08latitude\x18\x02 \x01(\x01\x12\x11\n\tlongitude\x18\x03 \x01(\x01\"$\n\x0cInsertStatus\x12\x14\n\x0cinsertStatus\x18\x01 \x01(\x05\"8\n\rCoordinatesID\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x15\n\rcoordinatesID\x18\x02 \x01(\x05\"2\n\x0b\x43oordinates\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\x32|\n\nGpsService\x12\x37\n\nCaneInsert\x12\x14.gps.CaneCoordinates\x1a\x11.gps.InsertStatus\"\x00\x12\x35\n\x0b\x41ppRetrieve\x12\x12.gps.CoordinatesID\x1a\x10.gps.Coordinates\"\x00\x42#\n\x0f\x63om.prerepa.gpsB\x08GpsProtoP\x01\xa2\x02\x03HLWb\x06proto3')
+  serialized_pb=_b('\n\tgps.proto\x12\x03gps\"H\n\x0f\x43\x61neCoordinates\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08latitude\x18\x02 \x01(\x01\x12\x11\n\tlongitude\x18\x03 \x01(\x01\"$\n\x0cInsertStatus\x12\x14\n\x0cinsertStatus\x18\x01 \x01(\x05\"!\n\rCoordinatesID\x12\x10\n\x08username\x18\x01 \x01(\t\"P\n\x0b\x43oordinates\x12\x10\n\x08latitude\x18\x01 \x03(\x01\x12\x11\n\tlongitude\x18\x02 \x03(\x01\x12\x0c\n\x04time\x18\x03 \x03(\t\x12\x0e\n\x06status\x18\x04 \x01(\x05\x32|\n\nGpsService\x12\x37\n\nCaneInsert\x12\x14.gps.CaneCoordinates\x1a\x11.gps.InsertStatus\"\x00\x12\x35\n\x0b\x41ppRetrieve\x12\x12.gps.CoordinatesID\x1a\x10.gps.Coordinates\"\x00\x42#\n\x0f\x63om.prerepa.gpsB\x08GpsProtoP\x01\xa2\x02\x03HLWb\x06proto3')
 )
 
 
@@ -116,9 +116,54 @@ _COORDINATESID = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=130,
+  serialized_end=163,
+)
+
+
+_COORDINATES = _descriptor.Descriptor(
+  name='Coordinates',
+  full_name='gps.Coordinates',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
     _descriptor.FieldDescriptor(
-      name='coordinatesID', full_name='gps.CoordinatesID.coordinatesID', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      name='latitude', full_name='gps.Coordinates.latitude', index=0,
+      number=1, type=1, cpp_type=5, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='longitude', full_name='gps.Coordinates.longitude', index=1,
+      number=2, type=1, cpp_type=5, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='time', full_name='gps.Coordinates.time', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='gps.Coordinates.status', index=3,
+      number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -135,46 +180,8 @@ _COORDINATESID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=130,
-  serialized_end=186,
-)
-
-
-_COORDINATES = _descriptor.Descriptor(
-  name='Coordinates',
-  full_name='gps.Coordinates',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='latitude', full_name='gps.Coordinates.latitude', index=0,
-      number=1, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='longitude', full_name='gps.Coordinates.longitude', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=188,
-  serialized_end=238,
+  serialized_start=165,
+  serialized_end=245,
 )
 
 DESCRIPTOR.message_types_by_name['CaneCoordinates'] = _CANECOORDINATES
@@ -220,8 +227,8 @@ _GPSSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=240,
-  serialized_end=364,
+  serialized_start=247,
+  serialized_end=371,
   methods=[
   _descriptor.MethodDescriptor(
     name='CaneInsert',

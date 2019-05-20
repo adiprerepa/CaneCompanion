@@ -24,15 +24,19 @@ message CaneCoordinates {
 
 // The response message containing the greetings
 message InsertStatus {
+
+
 	int32 insertStatus = 1;
 }
 
 message CoordinatesID {
 	string username = 1;
-	int32 coordinatesID = 2;
+	//int32 coordinatesID = 2;
 }
 
 message Coordinates {
 	repeated double latitude = 1;
 	repeated double longitude = 2;
+    repeated string time = 3;
+	int32 status = 4;
 }
