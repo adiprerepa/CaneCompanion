@@ -21,7 +21,7 @@ class GpsDatabase {
     int insertCoordinates(String username, double latitude, double longitude) {
         try {
             Statement stmt = gpsConnection.createStatement();
-            String insertStatement = String.format("INSERT INTO %s_gps (latitude, longitude, timestamp) values (%f, %f, %s)", username, latitude, longitude, java.time.LocalTime.now());
+            String insertStatement = String.format("INSERT INTO %s_gps (latitude, longitude) values (%f, %f)", username, latitude, longitude);
             stmt.executeUpdate(insertStatement);
             System.out.println("Insert Successful");
             return 200;
