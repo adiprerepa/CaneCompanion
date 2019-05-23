@@ -18,8 +18,7 @@ class Application(vision_pb2_grpc.VisionMicroserviceServicer):
         self.cursor = self.database.cursor()
 
     def image2text(self, image_content):
-        #return self.vision_client.label_detection(image=types.Image(content=image_content)).label_annotations[0].description
-        return '. '.join(map(lambda a: a.description, self.vision_client.label_detection(image=types.Image(content=image_content)).label_annotations))
+        return self.vision_client.label_detection(image=types.Image(content=image_content)).label_annotations[0].description
     def text2speech(self, text):
         tts = gTTS(text)
         tts.save("tts.mp3")

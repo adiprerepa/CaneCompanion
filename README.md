@@ -1,5 +1,6 @@
 # CaneCompanion
 WRITTEN ON 3/23/19
+BUILT AT A HACKATHON
 ## Inspiration
 
 I have an uncle who is legally blind, and someone needs to be watching over him at all times. Everyone is always worried for his safety, and he has virtually no physical independence. What we hope to fix for him and all other blind people is giving these people vision, so they can be safer and more independent.
