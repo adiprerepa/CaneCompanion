@@ -1,5 +1,42 @@
 # CaneCompanion
-WRITTEN ON 3/23/19
+
+# Update 5/12/19
+After a few months of restructuring everything, we completely refactored and remade the project (Redundant I know). This time, we made an IoS app, a new cane, and restructured the servers to microservice architecture with grpc, and new database schema.
+
+## IoS app
+ - We implemented an IoS app in swift with functionality to retrieve coordinates from the cane from the gps microservice, under the directory `gpsService`. 
+ - The app used `gRPC` and the google maps api to pin the coordinates of the cane in real time.
+ - There is also a login screen, and a create account screen that would converse with the `accountsService`, and the users would own different canes which could be tracked through the app. We added support for as many canes as you could want or get running the cane software. You could also view the pictures taken through the cane.
+
+## Servers
+### Accounts Microservice
+This service would both insert into a database when a new user was created, authenticate users, or set expiry limits on users. The service was in Java and used `gRPC`, and the database was in mysql. See files : `accountsService/src/main/java/com/prerepa/accounts/AccountsDatabase.java` and `accountsService/src/main/java/com/prerepa/accounts/LoginServer.java`
+
+### GPS Microservice
+This service would retrieve coordinates on one thread from the cane which updated every 10 seconds to the server, and would send to the IoS app which would display the realtime coordinates on the map. The mySql schema was fairly simple, and the proto file was also simple. See Files :
+`gpsService/src/main/java/com/prerepa/gps/GpsDatabase.java` and 
+`gpsService/src/main/java/com/prerepa/gps/RequestServer.java` for the src.
+
+### Vision Microservice
+This service would use the google vision API with our pre-programmed model for identifying images. The service recieve a byte array of image data and send back what the model thought the image had in it. This service was written in python for simplicity, and inserts data about the API call into the database. It also has the capability of sending a list of all the images and info about the API call in an array back to whatever client you choose. See File :
+`visionService/pymain.py`
+
+## Cane
+The cane was also made in Python (originially C++), and has the functionality of taking a picture with a camera that is on the front of the cane, (on the press of a button), and sending it to the `Vision Microservice`. Then, it receives back a wav of the image data in a byte[], and plays it on the speaker on the cane, attached to the raspberry pi. The cane functionality is pretty straightforward, see :
+`cane/vision_client.py`
+And the attached videos
+
+# What we learned after the update
+We learned alot about rest and grpc, and hardware interfacing with the RPI. It was much faster because we used `gRPC` instead of raw sockets, and we learned alot about the app development process too.
+## The perks of gRPC
+gRPC is great, and we chose it because its lightweight, uses *powerful* binary serialization, and is cross platform.
+
+# Authors
+- Aditya Prerepa
+- Akshay Trivedi
+- Ishan Jain
+
+FIRST WRITTEN ON 3/23/19
 BUILT AT A HACKATHON
 ## Inspiration
 
@@ -40,3 +77,4 @@ Slides : https://docs.google.com/presentation/d/1PGyEW9AsaN5V5b1ktX0y9_PrPj6ogfR
 Make a new ReadMe
 Finish Google vision and accounts microservice
 Render s3 bucket for AWS
+
